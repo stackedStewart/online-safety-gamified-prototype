@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://beh3d7xnb6hkw"]
+
+[ext_resource type="Script" uid="uid://p8ciulm2ak8a" path="res://scenes/results.gd" id="1_qh7lt"]
+
+[node name="Results" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qh7lt")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="SummaryCard" type="PanelContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="SummaryMargin" type="MarginContainer" parent="Margin/Layout/SummaryCard"]
+layout_mode = 2
+
+[node name="SummaryLayout" type="VBoxContainer" parent="Margin/Layout/SummaryCard/SummaryMargin"]
+layout_mode = 2
+
+[node name="XPLabel" type="Label" parent="Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
+layout_mode = 2
+
+[node name="BadgeLabel" type="Label" parent="Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
+layout_mode = 2
+
+[node name="ReminderLabel" type="Label" parent="Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="NextChallengeButton" type="Button" parent="Margin/Layout/Buttons"]
+layout_mode = 2
+
+[node name="BackToMenuButton" type="Button" parent="Margin/Layout/Buttons"]
+layout_mode = 2
+
+[node name="Footer" type="HBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="VersionLabel" type="Label" parent="Margin/Layout/Footer"]
+layout_mode = 2
