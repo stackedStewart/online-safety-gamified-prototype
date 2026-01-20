@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+/android/
+
+# Godot 4
+.godot/
+.import/
+
+# Exports/builds
+export/
+build/
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
