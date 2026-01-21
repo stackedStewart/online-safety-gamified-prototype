@@ -1,6 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn3lodumui1t4"]
+[gd_scene load_steps=8 format=3 uid="uid://dn3lodumui1t4"]
 
 [ext_resource type="Script" uid="uid://co4hwyxxga3xt" path="res://scenes/challenge_shell.gd" id="1_ueh3a"]
+
+[sub_resource type="Theme" id="Theme_ueh3a"]
+Button/styles/Normal = null
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ueh3a"]
+bg_color = Color(0.72676677, 0.96832806, 0.8847558, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.22060552, 0.310035, 0.27956146, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txree"]
+bg_color = Color(0.6995854, 0.77705634, 0.096308775, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.47058824, 0.31764707, 0.6627451, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lis8p"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0, 0.5411765, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kox66"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(1.6364455e-06, 0.37501174, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_011qv"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(1.1743903e-05, 0.9717832, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="ChallengeShell" type="Control"]
 layout_mode = 3
@@ -9,7 +69,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_ueh3a")
 script = ExtResource("1_ueh3a")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45490196, 0.8627451, 1, 1)
 
 [node name="PageContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -53,6 +123,7 @@ text = "Is this safe?"
 [node name="ScenarioCard" type="PanelContainer" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ueh3a")
 
 [node name="ScenarioMargin" type="MarginContainer" parent="PageContainer/Margin/Layout/ScenarioCard"]
 layout_mode = 2
@@ -89,6 +160,10 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Tell An Adult"
 
+[node name="Separator" type="Control" parent="PageContainer/Margin/Layout/Options"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
 [node name="FeedbackOverlay" type="Control" parent="."]
 z_index = 10
 layout_mode = 1
@@ -118,12 +193,17 @@ grow_vertical = 2
 [node name="FeedbackPanel" type="PanelContainer" parent="FeedbackOverlay/CenterContainer"]
 custom_minimum_size = Vector2(700, 300)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_txree")
 
 [node name="FeedbackMargin" type="MarginContainer" parent="FeedbackOverlay/CenterContainer/FeedbackPanel"]
 layout_mode = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_right = 90
 
 [node name="FeedbackLayout" type="VBoxContainer" parent="FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin"]
 layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
 
 [node name="FeedbackTitle" type="Label" parent="FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin/FeedbackLayout"]
 layout_mode = 2
@@ -135,6 +215,16 @@ theme_override_font_sizes/font_size = 50
 autowrap_mode = 2
 
 [node name="NextButton" type="Button" parent="FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin/FeedbackLayout"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_lis8p")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kox66")
+theme_override_styles/hover = SubResource("StyleBoxFlat_011qv")
 text = "Next
 "
+
+[node name="FeedbackSeparator" type="Control" parent="FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin/FeedbackLayout"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
