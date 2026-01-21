@@ -1,0 +1,68 @@
+{
+  "scenarios": [
+	{
+	  "id": "prize_tablet",
+	  "prompt": "You won a new tablet! Click the link to get your prize now!",
+	  "options": ["Click the link", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Great job! This message is not safe. Tell an adult if you win a prize you didn’t enter.",
+	  "feedback_wrong": "Nice try! Don’t click links like this. Tell an adult for help."
+	},
+	{
+	  "id": "unknown_friend",
+	  "prompt": "Someone you don’t know says: ‘Hi! Want to be my friend?’",
+	  "options": ["Say hello back", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Well done! Tell an adult if someone you don’t know messages you.",
+	  "feedback_wrong": "Nice try! It’s safer to tell an adult if you don’t know the person."
+	},
+	{
+	  "id": "free_coins",
+	  "prompt": "Get FREE game coins! Click here to get lots of rewards!",
+	  "options": ["Click the link", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Good choice! Free rewards messages can be tricks. Tell an adult first.",
+	  "feedback_wrong": "Nice try! Free rewards can be a trick. Tell an adult first."
+	},
+	{
+	  "id": "name_age",
+	  "prompt": "What is your name and how old are you? Type it here to play the game.",
+	  "options": ["Type my name", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Great job! Don’t share personal info online. Tell an adult if you’re asked.",
+	  "feedback_wrong": "Nice try! Don’t share personal info. Tell an adult if you’re asked."
+	},
+	{
+	  "id": "pretend_teacher",
+	  "prompt": "Hi, I am your teacher. Click this link to see your homework.",
+	  "options": ["Click the link", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Well done! Some messages pretend to be someone you know. Check with an adult first.",
+	  "feedback_wrong": "Nice try! It could be fake. Check with an adult first."
+	},
+	{
+	  "id": "virus_warning",
+	  "prompt": "Warning! Your tablet has a virus! Click here now to fix it!",
+	  "options": ["Click the link", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Great choice! Scary warnings can be tricks. Tell an adult to help.",
+	  "feedback_wrong": "Nice try! Don’t click scary warnings. Tell an adult to help."
+	},
+	{
+	  "id": "free_stickers",
+	  "prompt": "Click here to get free stickers sent to your house!",
+	  "options": ["Click the link", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Good job! Never share your address. Tell an adult to stay safe.",
+	  "feedback_wrong": "Nice try! Never share your address. Tell an adult to stay safe."
+	},
+	{
+	  "id": "where_you_live",
+	  "prompt": "I’m a new kid. Can you tell me where you live?",
+	  "options": ["Tell them", "Ignore it", "Tell an adult"],
+	  "correct_index": 2,
+	  "feedback_correct": "Excellent! Never tell strangers where you live. Tell a trusted adult.",
+	  "feedback_wrong": "Nice try! Never tell strangers where you live. Tell a trusted adult."
+	}
+  ]
+}

@@ -1,8 +1,8 @@
 extends Control
 
 func _ready():
-	print("GameState loaded. XP =", GameState.xp)
-	$Margin/Layout/Buttons/PlayButton.pressed.connect(_on_play_pressed)
+	print("GameState loaded. XP = ", GameState.xp)
+	$CenterContainer/Margin/Layout/Buttons/PlayButton.pressed.connect(_on_play_pressed)
 	
 
 func _on_play_pressed():

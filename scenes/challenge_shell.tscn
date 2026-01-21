@@ -11,62 +11,85 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ueh3a")
 
-[node name="Margin" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PageContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Layout" type="VBoxContainer" parent="Margin"]
+[node name="Margin" type="MarginContainer" parent="PageContainer"]
+custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
 
-[node name="TopBar" type="HBoxContainer" parent="Margin/Layout"]
+[node name="Layout" type="VBoxContainer" parent="PageContainer/Margin"]
 layout_mode = 2
+theme_override_constants/separation = 20
 
-[node name="BackButton" type="Button" parent="Margin/Layout/TopBar"]
+[node name="TopBar" type="HBoxContainer" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="BackButton" type="Button" parent="PageContainer/Margin/Layout/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Menu"
 
-[node name="TopBarSpacer" type="Control" parent="Margin/Layout/TopBar"]
+[node name="TopBarSpacer" type="Control" parent="PageContainer/Margin/Layout/TopBar"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="XPLabel" type="Label" parent="Margin/Layout/TopBar"]
+[node name="XPLabel" type="Label" parent="PageContainer/Margin/Layout/TopBar"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "XP: 0
 "
 
-[node name="TitleLabel" type="Label" parent="Margin/Layout"]
+[node name="TitleLabel" type="Label" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
 text = "Is this safe?"
 
-[node name="ScenarioCard" type="PanelContainer" parent="Margin/Layout"]
+[node name="ScenarioCard" type="PanelContainer" parent="PageContainer/Margin/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScenarioMargin" type="MarginContainer" parent="PageContainer/Margin/Layout/ScenarioCard"]
 layout_mode = 2
 
-[node name="ScenarioMargin" type="MarginContainer" parent="Margin/Layout/ScenarioCard"]
+[node name="ScenarioLabel" type="Label" parent="PageContainer/Margin/Layout/ScenarioCard/ScenarioMargin"]
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-
-[node name="ScenarioLabel" type="Label" parent="Margin/Layout/ScenarioCard/ScenarioMargin"]
-custom_minimum_size = Vector2(160, 0)
-layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/line_spacing = 3
+theme_override_font_sizes/font_size = 70
 text = "Scenario"
+horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Options" type="VBoxContainer" parent="Margin/Layout"]
+[node name="Options" type="VBoxContainer" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="OptionAButton" type="Button" parent="Margin/Layout/Options"]
+[node name="OptionAButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Click the Link"
 
-[node name="OptionBButton" type="Button" parent="Margin/Layout/Options"]
+[node name="OptionBButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Ignore it"
 
-[node name="OptionCButton" type="Button" parent="Margin/Layout/Options"]
+[node name="OptionCButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Tell An Adult"
 
 [node name="FeedbackOverlay" type="Control" parent="."]
-visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 15
@@ -74,6 +97,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Dimmer" type="ColorRect" parent="FeedbackOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49019608)
 
 [node name="CenterContainer" type="CenterContainer" parent="FeedbackOverlay"]
 layout_mode = 1
@@ -84,7 +116,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FeedbackPanel" type="PanelContainer" parent="FeedbackOverlay/CenterContainer"]
-custom_minimum_size = Vector2(600, 320)
+custom_minimum_size = Vector2(700, 300)
 layout_mode = 2
 
 [node name="FeedbackMargin" type="MarginContainer" parent="FeedbackOverlay/CenterContainer/FeedbackPanel"]
@@ -97,7 +129,12 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="FeedbackText" type="Label" parent="FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin/FeedbackLayout"]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
+autowrap_mode = 2
 
 [node name="NextButton" type="Button" parent="FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin/FeedbackLayout"]
 layout_mode = 2
+text = "Next
+"

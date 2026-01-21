@@ -11,51 +11,62 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqeox")
 
-[node name="Margin" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
 theme_override_constants/margin_bottom = 40
 
-[node name="Layout" type="VBoxContainer" parent="Margin"]
+[node name="Layout" type="VBoxContainer" parent="CenterContainer/Margin"]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Header" type="VBoxContainer" parent="Margin/Layout"]
+[node name="Header" type="VBoxContainer" parent="CenterContainer/Margin/Layout"]
 layout_mode = 2
 
-[node name="TitleLabel" type="Label" parent="Margin/Layout/Header"]
+[node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 100
 text = "Stay Safe Online"
 horizontal_alignment = 1
 
-[node name="SubtitleLabel" type="Label" parent="Margin/Layout/Header"]
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
 
-[node name="SpaceTop" type="Control" parent="Margin/Layout/Header"]
+[node name="SpaceTop" type="Control" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
 
-[node name="Buttons" type="VBoxContainer" parent="Margin/Layout"]
+[node name="Buttons" type="VBoxContainer" parent="CenterContainer/Margin/Layout"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="Margin/Layout/Buttons"]
+[node name="PlayButton" type="Button" parent="CenterContainer/Margin/Layout/Buttons"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Play"
 
-[node name="SettingsButton" type="Button" parent="Margin/Layout/Buttons"]
+[node name="SettingsButton" type="Button" parent="CenterContainer/Margin/Layout/Buttons"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Settings"
 
-[node name="Footer" type="HBoxContainer" parent="Margin/Layout"]
+[node name="Footer" type="HBoxContainer" parent="CenterContainer/Margin/Layout"]
 layout_mode = 2
 
-[node name="VersionLabel" type="Label" parent="Margin/Layout/Footer"]
+[node name="VersionLabel" type="Label" parent="CenterContainer/Margin/Layout/Footer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "v0.1"
 
-[node name="Stretch" type="Control" parent="Margin/Layout/Footer"]
+[node name="Stretch" type="Control" parent="CenterContainer/Margin/Layout/Footer"]
 layout_mode = 2
