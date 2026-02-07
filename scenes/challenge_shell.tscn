@@ -86,16 +86,23 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -81.5
+offset_bottom = 81.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Margin" type="MarginContainer" parent="PageContainer"]
 custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
 
 [node name="Layout" type="VBoxContainer" parent="PageContainer/Margin"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 16
 
 [node name="TopBar" type="HBoxContainer" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
@@ -103,7 +110,7 @@ theme_override_constants/separation = 20
 
 [node name="BackButton" type="Button" parent="PageContainer/Margin/Layout/TopBar"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 51
 text = "Menu"
 
 [node name="TopBarSpacer" type="Control" parent="PageContainer/Margin/Layout/TopBar"]
@@ -118,9 +125,11 @@ text = "XP: 0
 
 [node name="TitleLabel" type="Label" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Is this safe?"
 
 [node name="ScenarioCard" type="PanelContainer" parent="PageContainer/Margin/Layout"]
+custom_minimum_size = Vector2(0, 220)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ueh3a")
@@ -133,7 +142,7 @@ custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_constants/line_spacing = 3
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 32
 text = "Scenario"
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -143,19 +152,19 @@ layout_mode = 2
 theme_override_constants/separation = 12
 
 [node name="OptionAButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
-custom_minimum_size = Vector2(0, 90)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Click the Link"
 
 [node name="OptionBButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
-custom_minimum_size = Vector2(0, 90)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Ignore it"
 
 [node name="OptionCButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
-custom_minimum_size = Vector2(0, 90)
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Tell An Adult"
