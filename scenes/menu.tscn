@@ -1,6 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://4nwf3xcpg3qf"]
+[gd_scene load_steps=8 format=3 uid="uid://4nwf3xcpg3qf"]
 
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
+bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhnvy"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ytvr"]
+bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3eks"]
+bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +70,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqeox")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.43529412, 0.827451, 1, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 custom_minimum_size = Vector2(900, 0)
@@ -36,12 +105,13 @@ layout_mode = 2
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 100
-text = "Stay Safe Online"
+theme_override_font_sizes/font_size = 56
+text = "STAY SAFE ONLINE"
 horizontal_alignment = 1
 
 [node name="SubtitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
 
 [node name="SpaceTop" type="Control" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
@@ -53,11 +123,17 @@ layout_mode = 2
 [node name="PlayButton" type="Button" parent="CenterContainer/Margin/Layout/Buttons"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vjb58")
+theme_override_styles/hover = SubResource("StyleBoxFlat_con2f")
 text = "Play"
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/Margin/Layout/Buttons"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4ytvr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g3eks")
 text = "Settings"
 
 [node name="Footer" type="HBoxContainer" parent="CenterContainer/Margin/Layout"]
