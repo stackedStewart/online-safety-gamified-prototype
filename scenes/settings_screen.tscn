@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://db830jfdgfklv"]
+
+[ext_resource type="Script" uid="uid://jw3tpydiw4an" path="res://scenes/settings_screen.gd" id="1_srqes"]
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_srqes")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.43529412, 0.827451, 1, 1)
+
+[node name="PageCenter" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="PageCenter"]
+layout_mode = 2
+
+[node name="Layout" type="VBoxContainer" parent="PageCenter/Margin"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+text = "Settings"
+
+[node name="TextSizeRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+
+[node name="TextSizeLabel" type="Label" parent="PageCenter/Margin/Layout/TextSizeRow"]
+layout_mode = 2
+text = "Text Size"
+
+[node name="TextSizeOption" type="OptionButton" parent="PageCenter/Margin/Layout/TextSizeRow"]
+layout_mode = 2
+
+[node name="HighContrastRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+
+[node name="HighContrastLabel" type="Label" parent="PageCenter/Margin/Layout/HighContrastRow"]
+layout_mode = 2
+text = "High Contrast"
+
+[node name="HighContrastToggle" type="CheckButton" parent="PageCenter/Margin/Layout/HighContrastRow"]
+layout_mode = 2
+
+[node name="SoundRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="PageCenter/Margin/Layout/SoundRow"]
+layout_mode = 2
+text = "Sound"
+
+[node name="SoundToggle" type="CheckButton" parent="PageCenter/Margin/Layout/SoundRow"]
+layout_mode = 2
+
+[node name="ReduceMotionRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+
+[node name="ReduceMotionLabel" type="Label" parent="PageCenter/Margin/Layout/ReduceMotionRow"]
+layout_mode = 2
+text = "Reduce Motion"
+
+[node name="ReduceMotionToggle" type="CheckButton" parent="PageCenter/Margin/Layout/ReduceMotionRow"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+text = "Back"

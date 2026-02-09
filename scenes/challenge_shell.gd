@@ -22,6 +22,8 @@ var awaiting_next: bool = false
 @onready var next_button: Button = $FeedbackOverlay/CenterContainer/FeedbackPanel/FeedbackMargin/FeedbackLayout/NextButton
 
 func _ready() -> void:
+	Settings.changed.connect(apply_accessibility)
+	apply_accessibility()
 	overlay.visible = false
 
 	back_button.pressed.connect(_on_back_pressed)
@@ -133,3 +135,15 @@ func _update_question_counter() -> void:
 	var current := current_index + 1 # humans start at 1
 	#question_counter_label.text = "Q %d / %d" % [current, total]
 	question_counter_label.text = "Question %d of %d" % [current, total]
+	
+func apply_accessibility() -> void:
+	# Example: change background colour
+	var bg: ColorRect = $Background # adjust if node name differs
+
+	if Settings.high_contrast:
+		bg.color = Color("#000000")
+	else:
+		bg.color = Color("#6FD3FF")
+
+	# Example: scale key labels/buttons using font sizes
+	# (Set base sizes then multiply by Settings.text_scale)

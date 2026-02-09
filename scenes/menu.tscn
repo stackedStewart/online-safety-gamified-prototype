@@ -146,3 +146,5 @@ text = "v0.1"
 
 [node name="Stretch" type="Control" parent="CenterContainer/Margin/Layout/Footer"]
 layout_mode = 2
+
+[connection signal="pressed" from="CenterContainer/Margin/Layout/Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]

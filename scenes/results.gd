@@ -11,6 +11,8 @@ extends Control
 @onready var back_to_menu_button: Button = $PageCenter/Margin/Layout/Buttons/BackToMenuButton
 
 func _ready() -> void:
+	Settings.changed.connect(apply_accessibility)
+	apply_accessibility()
 	title_label.text = "Results"
 
 	var xp: int = GameState.xp
@@ -45,3 +47,15 @@ func _on_try_again() -> void:
 
 func _on_back_to_menu() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	
+func apply_accessibility() -> void:
+	# Example: change background colour
+	var bg: ColorRect = $Background # adjust if node name differs
+
+	if Settings.high_contrast:
+		bg.color = Color("#000000")
+	else:
+		bg.color = Color("#6FD3FF")
+
+	# Example: scale key labels/buttons using font sizes
+	# (Set base sizes then multiply by Settings.text_scale)
