@@ -9,7 +9,7 @@ var awaiting_next: bool = false
 # --- Page / main UI (now under PageContainer) ---
 @onready var back_button: Button = $PageContainer/Margin/Layout/TopBar/BackButton
 @onready var xp_label: Label = $PageContainer/Margin/Layout/TopBar/XPLabel
-
+@onready var question_counter_label: Label = $PageContainer/Margin/Layout/TopBar/QuestionCounterLabel
 @onready var scenario_label: Label = $PageContainer/Margin/Layout/ScenarioCard/ScenarioMargin/ScenarioLabel
 @onready var option_a: Button = $PageContainer/Margin/Layout/Options/OptionAButton
 @onready var option_b: Button = $PageContainer/Margin/Layout/Options/OptionBButton
@@ -61,6 +61,7 @@ func _load_scenarios() -> void:
 
 func _show_current() -> void:
 	if scenarios.is_empty():
+		question_counter_label.text = "Q 0 / 0"
 		scenario_label.text = "No scenarios loaded."
 		option_a.disabled = true
 		option_b.disabled = true
@@ -84,6 +85,7 @@ func _show_current() -> void:
 	awaiting_next = false
 
 	_update_xp()
+	_update_question_counter()
 
 func _update_xp() -> void:
 	xp_label.text = "XP: %d" % GameState.xp
@@ -124,3 +126,10 @@ func _on_next_pressed() -> void:
 		return
 
 	_show_current()
+	
+	
+func _update_question_counter() -> void:
+	var total := scenarios.size()
+	var current := current_index + 1 # humans start at 1
+	#question_counter_label.text = "Q %d / %d" % [current, total]
+	question_counter_label.text = "Question %d of %d" % [current, total]

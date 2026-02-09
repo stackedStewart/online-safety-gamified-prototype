@@ -236,6 +236,11 @@ theme_override_constants/separation = 16
 layout_mode = 2
 theme_override_constants/separation = 20
 
+[node name="QuestionCounterLabel" type="Label" parent="PageContainer/Margin/Layout/TopBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Q 1/8"
+
 [node name="BackButton" type="Button" parent="PageContainer/Margin/Layout/TopBar"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 51

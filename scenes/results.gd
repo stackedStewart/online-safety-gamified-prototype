@@ -3,6 +3,7 @@ extends Control
 @onready var title_label: Label = $PageCenter/Margin/Layout/TitleLabel
 
 @onready var xp_label: Label = $PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout/XPLabel
+
 @onready var badge_label: Label = $PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout/BadgeLabel
 @onready var reminder_label: Label = $PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout/ReminderLabel
 
@@ -36,6 +37,7 @@ func _message_for_score(correct: int, total: int) -> String:
 		return "🙂 Safety Learner!\nGood effort! Take your time and think it through."
 	else:
 		return "🌱 Getting Started!\nNice try! Let's practise again — tell a trusted adult if unsure."
+
 
 func _on_try_again() -> void:
 	GameState.reset_run()
