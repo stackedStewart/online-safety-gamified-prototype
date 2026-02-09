@@ -1,6 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://beh3d7xnb6hkw"]
+[gd_scene load_steps=6 format=3 uid="uid://beh3d7xnb6hkw"]
 
 [ext_resource type="Script" uid="uid://p8ciulm2ak8a" path="res://scenes/results.gd" id="1_qh7lt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qh7lt"]
+bg_color = Color(0.7490196, 0.96862745, 0.9019608, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21kdr"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4wmc"]
+bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6ibn"]
+content_margin_left = 14.0
+content_margin_top = 14.0
+content_margin_right = 14.0
+content_margin_bottom = 14.0
+bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
 
 [node name="Results" type="Control"]
 layout_mode = 3
@@ -20,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.43529412, 0.827451, 1, 1)
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="PageCenter" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,41 +75,69 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Layout" type="VBoxContainer" parent="Margin"]
+[node name="Margin" type="MarginContainer" parent="PageCenter"]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Layout" type="VBoxContainer" parent="PageCenter/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+
+[node name="SummaryCard" type="PanelContainer" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qh7lt")
+
+[node name="SummaryMargin" type="MarginContainer" parent="PageCenter/Margin/Layout/SummaryCard"]
 layout_mode = 2
 
-[node name="TitleLabel" type="Label" parent="Margin/Layout"]
+[node name="SummaryLayout" type="VBoxContainer" parent="PageCenter/Margin/Layout/SummaryCard/SummaryMargin"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="XPLabel" type="Label" parent="PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05490196, 0.17254902, 0.2, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="BadgeLabel" type="Label" parent="PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05490196, 0.17254902, 0.2, 1)
+theme_override_font_sizes/font_size = 28
+
+[node name="ReminderLabel" type="Label" parent="PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05490196, 0.17254902, 0.2, 1)
+theme_override_font_sizes/font_size = 23
+
+[node name="Buttons" type="VBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
 
-[node name="SummaryCard" type="PanelContainer" parent="Margin/Layout"]
+[node name="NextChallengeButton" type="Button" parent="PageCenter/Margin/Layout/Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_21kdr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r4wmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w6ibn")
+
+[node name="BackToMenuButton" type="Button" parent="PageCenter/Margin/Layout/Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_21kdr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r4wmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w6ibn")
+
+[node name="Footer" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
 
-[node name="SummaryMargin" type="MarginContainer" parent="Margin/Layout/SummaryCard"]
-layout_mode = 2
-
-[node name="SummaryLayout" type="VBoxContainer" parent="Margin/Layout/SummaryCard/SummaryMargin"]
-layout_mode = 2
-
-[node name="XPLabel" type="Label" parent="Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
-layout_mode = 2
-
-[node name="BadgeLabel" type="Label" parent="Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
-layout_mode = 2
-
-[node name="ReminderLabel" type="Label" parent="Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout"]
-layout_mode = 2
-
-[node name="Buttons" type="VBoxContainer" parent="Margin/Layout"]
-layout_mode = 2
-
-[node name="NextChallengeButton" type="Button" parent="Margin/Layout/Buttons"]
-layout_mode = 2
-
-[node name="BackToMenuButton" type="Button" parent="Margin/Layout/Buttons"]
-layout_mode = 2
-
-[node name="Footer" type="HBoxContainer" parent="Margin/Layout"]
-layout_mode = 2
-
-[node name="VersionLabel" type="Label" parent="Margin/Layout/Footer"]
+[node name="VersionLabel" type="Label" parent="PageCenter/Margin/Layout/Footer"]
 layout_mode = 2
