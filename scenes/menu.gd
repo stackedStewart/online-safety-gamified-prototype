@@ -1,26 +1,28 @@
 extends Control
 
-func _ready():
-	print("GameState loaded. XP = ", GameState.xp)
-	$CenterContainer/Margin/Layout/Buttons/PlayButton.pressed.connect(_on_play_pressed)
-	$CenterContainer/Margin/Layout/Buttons/SettingsButton.pressed.connect(_on_settings_pressed)
-	
+@onready var play_button: Button = $CenterContainer/Margin/Layout/Buttons/PlayButton
+@onready var settings_button: Button = $CenterContainer/Margin/Layout/Buttons/SettingsButton
 
-func _on_play_pressed():
+func _ready() -> void:
+	# Button signals (code-based connection)
+	play_button.pressed.connect(_on_play_pressed)
+	settings_button.pressed.connect(_on_settings_pressed)
+
+	# Apply accessibility now + whenever Settings change
+	Settings.changed.connect(apply_accessibility)
+	apply_accessibility()
+
+func _on_play_pressed() -> void:
 	GameState.reset_run()
 	get_tree().change_scene_to_file("res://scenes/challenge_shell.tscn")
 
 func _on_settings_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/settings_screen.tscn")
-	
+
 func apply_accessibility() -> void:
-	# Example: change background colour
-	var bg: ColorRect = $Background # adjust if node name differs
-
-	if Settings.high_contrast:
-		bg.color = Color("#000000")
-	else:
-		bg.color = Color("#6FD3FF")
-
-	# Example: scale key labels/buttons using font sizes
-	# (Set base sizes then multiply by Settings.text_scale)
+	# Safe: avoids null-instance crashes if Background is missing/renamed
+	var bg := get_node_or_null("Background")
+	if bg == null:
+		return
+	if bg is ColorRect:
+		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#6FD3FF")

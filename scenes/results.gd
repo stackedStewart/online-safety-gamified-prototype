@@ -3,7 +3,6 @@ extends Control
 @onready var title_label: Label = $PageCenter/Margin/Layout/TitleLabel
 
 @onready var xp_label: Label = $PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout/XPLabel
-
 @onready var badge_label: Label = $PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout/BadgeLabel
 @onready var reminder_label: Label = $PageCenter/Margin/Layout/SummaryCard/SummaryMargin/SummaryLayout/ReminderLabel
 
@@ -13,6 +12,7 @@ extends Control
 func _ready() -> void:
 	Settings.changed.connect(apply_accessibility)
 	apply_accessibility()
+
 	title_label.text = "Results"
 
 	var xp: int = GameState.xp
@@ -40,22 +40,19 @@ func _message_for_score(correct: int, total: int) -> String:
 	else:
 		return "🌱 Getting Started!\nNice try! Let's practise again — tell a trusted adult if unsure."
 
-
 func _on_try_again() -> void:
 	GameState.reset_run()
 	get_tree().change_scene_to_file("res://scenes/challenge_shell.tscn")
 
 func _on_back_to_menu() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
-	
+
 func apply_accessibility() -> void:
-	# Example: change background colour
-	var bg: ColorRect = $Background # adjust if node name differs
-
-	if Settings.high_contrast:
-		bg.color = Color("#000000")
-	else:
-		bg.color = Color("#6FD3FF")
-
+	# Safe: avoids null-instance crashes if Background is missing/renamed
+	var bg := get_node_or_null("Background")
+	if bg == null:
+		return
+	if bg is ColorRect:
+		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#6FD3FF")
 	# Example: scale key labels/buttons using font sizes
 	# (Set base sizes then multiply by Settings.text_scale)

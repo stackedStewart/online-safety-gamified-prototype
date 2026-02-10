@@ -68,6 +68,7 @@ func _show_current() -> void:
 		option_a.disabled = true
 		option_b.disabled = true
 		option_c.disabled = true
+		_update_xp()
 		return
 
 	current_index = clamp(current_index, 0, scenarios.size() - 1)
@@ -138,12 +139,16 @@ func _update_question_counter() -> void:
 	
 func apply_accessibility() -> void:
 	# Example: change background colour
-	var bg: ColorRect = $Background # adjust if node name differs
+	var bg := get_node_or_null("Background") # adjust if node name differs
+	if bg == null:
+		return
+	if bg is ColorRect:
+		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("6FD3FF")
 
 	if Settings.high_contrast:
 		bg.color = Color("#000000")
 	else:
 		bg.color = Color("#6FD3FF")
 
-	# Example: scale key labels/buttons using font sizes
-	# (Set base sizes then multiply by Settings.text_scale)
+	# Future: apply Settings.text_scale to LabelSettings / Theme overrides
+	# Future: respect Settings.reduce_motion for tween/animation choices

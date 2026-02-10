@@ -2,12 +2,12 @@ extends Node
 
 signal changed
 
-# Accessibility
+# --- Accessibility ---
 var text_scale: float = 1.0
 var high_contrast: bool = false
 var reduce_motion: bool = false
 
-# Audio
+# --- Audio ---
 var sound_enabled: bool = true
 
 func set_text_scale(value: float) -> void:
@@ -24,5 +24,9 @@ func set_reduce_motion(value: bool) -> void:
 
 func set_sound_enabled(value: bool) -> void:
 	sound_enabled = value
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), not sound_enabled)
+
+	var bus_index := AudioServer.get_bus_index("SFX")
+	if bus_index != -1:
+		AudioServer.set_bus_mute(bus_index, not sound_enabled)
+
 	emit_signal("changed")

@@ -6,10 +6,10 @@ var score: int = 0
 var correct_count: int = 0
 var total_answered: int = 0
 
-# --- Scenario tracking (used later when we load JSON) ---
+# --- Scenario tracking ---
 var current_question_index: int = 0
 
-# Optional: store last result (useful for Results screen)
+# --- Last result (useful for Results / UX) ---
 var last_was_correct: bool = false
 var last_feedback: String = ""
 var last_xp_earned: int = 0
@@ -38,4 +38,4 @@ func apply_answer(is_correct: bool, feedback_text: String, xp_correct: int = 10,
 		last_xp_earned = xp_wrong
 
 	xp += last_xp_earned
-	score = xp  # simple mapping for now; can change later
+	score = xp # simple mapping for now; can change later
