@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bkjc1ko5b2tj7"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://vqgddkonbfmn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpxyt"]
 content_margin_left = 18.0
@@ -16,7 +16,7 @@ content_margin_left = 18.0
 content_margin_top = 12.0
 content_margin_right = 18.0
 content_margin_bottom = 12.0
-bg_color = Color(1, 0.654902, 0.14901961, 1)
+bg_color = Color(0.92941177, 0.92941177, 0.92941177, 1)
 corner_radius_top_left = 18
 corner_radius_top_right = 18
 corner_radius_bottom_right = 18
@@ -27,7 +27,7 @@ content_margin_left = 18.0
 content_margin_top = 12.0
 content_margin_right = 18.0
 content_margin_bottom = 12.0
-bg_color = Color(1, 0.7019608, 0.2784314, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 22
 corner_radius_top_right = 22
 corner_radius_bottom_right = 22
@@ -38,7 +38,12 @@ content_margin_left = 18.0
 content_margin_top = 12.0
 content_margin_right = 18.0
 content_margin_bottom = 12.0
-bg_color = Color(0.9843137, 0.54901963, 0, 1)
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 18
 corner_radius_top_right = 18
 corner_radius_bottom_right = 18
@@ -49,17 +54,14 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-bg_color = Color(0.9965393, 0.889398, 0.8205892, 1)
-corner_radius_top_left = 36
-corner_radius_top_right = 36
-corner_radius_bottom_right = 36
-corner_radius_bottom_left = 36
-shadow_color = Color(0, 0, 0, 0.003921569)
-shadow_size = 18
-shadow_offset = Vector2(0, 6)
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 28
+corner_radius_top_right = 28
+corner_radius_bottom_right = 28
+corner_radius_bottom_left = 28
 
 [resource]
-Button/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.46666667, 0.46666667, 0.46666667, 1)
 Button/colors/font_hover_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 Button/colors/font_pressed_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
@@ -67,5 +69,5 @@ Button/styles/disabled = SubResource("StyleBoxFlat_xpxyt")
 Button/styles/hover = SubResource("StyleBoxFlat_i2xc0")
 Button/styles/normal = SubResource("StyleBoxFlat_c2lqr")
 Button/styles/pressed = SubResource("StyleBoxFlat_uf2kn")
-Label/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+Label/colors/font_color = Color(1, 1, 1, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_hdybv")

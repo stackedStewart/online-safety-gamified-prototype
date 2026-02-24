@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://beh3d7xnb6hkw"]
+[gd_scene load_steps=7 format=3 uid="uid://beh3d7xnb6hkw"]
 
+[ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_21kdr"]
 [ext_resource type="Script" uid="uid://p8ciulm2ak8a" path="res://scenes/results.gd" id="1_qh7lt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qh7lt"]
@@ -56,6 +57,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_21kdr")
 script = ExtResource("1_qh7lt")
 
 [node name="Background" type="ColorRect" parent="."]

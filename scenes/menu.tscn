@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://4nwf3xcpg3qf"]
+[gd_scene load_steps=9 format=3 uid="uid://4nwf3xcpg3qf"]
 
+[ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_vjb58"]
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
@@ -69,6 +70,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_vjb58")
 script = ExtResource("1_yqeox")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -116,11 +118,22 @@ theme_override_font_sizes/font_size = 28
 [node name="SpaceTop" type="Control" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
 
-[node name="Buttons" type="VBoxContainer" parent="CenterContainer/Margin/Layout"]
-custom_minimum_size = Vector2(100, 0)
+[node name="SpaceHeaderCard" type="Control" parent="CenterContainer/Margin/Layout"]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="CenterContainer/Margin/Layout/Buttons"]
+[node name="MenuCard" type="PanelContainer" parent="CenterContainer/Margin/Layout"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="CenterContainer/Margin/Layout/MenuCard"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="PlayButton" type="Button" parent="CenterContainer/Margin/Layout/MenuCard/Buttons"]
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
@@ -128,7 +141,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_vjb58")
 theme_override_styles/hover = SubResource("StyleBoxFlat_con2f")
 text = "Play"
 
-[node name="SettingsButton" type="Button" parent="CenterContainer/Margin/Layout/Buttons"]
+[node name="SettingsButton" type="Button" parent="CenterContainer/Margin/Layout/MenuCard/Buttons"]
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
@@ -147,4 +161,4 @@ text = "v0.1"
 [node name="Stretch" type="Control" parent="CenterContainer/Margin/Layout/Footer"]
 layout_mode = 2
 
-[connection signal="pressed" from="CenterContainer/Margin/Layout/Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/Margin/Layout/MenuCard/Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]

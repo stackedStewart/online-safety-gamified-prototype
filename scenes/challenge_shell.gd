@@ -141,38 +141,7 @@ func apply_accessibility() -> void:
 	# Background (optional)
 	var bg := get_node_or_null("Background")
 	if bg != null and bg is ColorRect:
-		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#6FD3FF")
+		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#AEE6FF")
 
-	# Text scaling (always)
-	apply_text_scaling(self)
-		
-func apply_text_scaling(root: Node) -> void:
-	_apply_text_scaling_recursive(root)
-
-func _apply_text_scaling_recursive(node: Node) -> void:
-	if node is Control:
-		var c := node as Control
-
-		if c is Label or c is Button or c is CheckButton or c is OptionButton or c is RichTextLabel:
-			var meta_key := "base_font_size"
-
-			if not c.has_meta(meta_key):
-				var base := c.get_theme_font_size("font_size")
-				if base > 0:
-					c.set_meta(meta_key, base)
-
-			if c.has_meta(meta_key):
-				var base_size: int = int(c.get_meta(meta_key))
-				var new_size: int = int(round(base_size * Settings.text_scale))
-				c.add_theme_font_size_override("font_size", new_size)
-
-				if c is OptionButton:
-					var popup := (c as OptionButton).get_popup()
-					if popup != null:
-						popup.add_theme_font_size_override("font_size", new_size)
-
-	for child in node.get_children():
-		_apply_text_scaling_recursive(child)
-
-	# Future: apply Settings.text_scale to LabelSettings / Theme overrides
-	# Future: respect Settings.reduce_motion for tween/animation choices
+	# Apply theme scaling (fonts + spacing + padding)
+	UITheme.apply_theme(self)

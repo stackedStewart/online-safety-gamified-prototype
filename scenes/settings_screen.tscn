@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://db830jfdgfklv"]
+[gd_scene load_steps=3 format=3 uid="uid://db830jfdgfklv"]
 
+[ext_resource type="Theme" uid="uid://vqgddkonbfmn" path="res://ui/themes/theme_high_contrast.tres" id="1_assm4"]
 [ext_resource type="Script" uid="uid://jw3tpydiw4an" path="res://scenes/settings_screen.gd" id="1_srqes"]
 
 [node name="SettingsScreen" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_assm4")
 script = ExtResource("1_srqes")
 
 [node name="Background" type="ColorRect" parent="."]

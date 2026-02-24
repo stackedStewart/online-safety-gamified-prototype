@@ -1,9 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://dn3lodumui1t4"]
 
+[ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_txree"]
 [ext_resource type="Script" uid="uid://co4hwyxxga3xt" path="res://scenes/challenge_shell.gd" id="1_ueh3a"]
-
-[sub_resource type="Theme" id="Theme_ueh3a"]
-Button/styles/Normal = null
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo6a5"]
 content_margin_left = 14.0
@@ -197,7 +195,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_ueh3a")
+theme = ExtResource("1_txree")
 script = ExtResource("1_ueh3a")
 
 [node name="Background" type="ColorRect" parent="."]
