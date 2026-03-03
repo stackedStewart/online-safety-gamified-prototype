@@ -1,37 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://dn3lodumui1t4"]
+[gd_scene load_steps=5 format=3 uid="uid://dn3lodumui1t4"]
 
-[ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_txree"]
 [ext_resource type="Script" uid="uid://co4hwyxxga3xt" path="res://scenes/challenge_shell.gd" id="1_ueh3a"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo6a5"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whhfy"]
-bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8ase"]
-bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ueh3a"]
 content_margin_left = 18.0
@@ -49,100 +18,6 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7y1d"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xtwe"]
-bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gq6um"]
-content_margin_left = 18.0
-content_margin_top = 18.0
-content_margin_right = 18.0
-content_margin_bottom = 18.0
-bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8gep"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ieut"]
-bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohqp5"]
-bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kahjl"]
-bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apyvp"]
-bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh0hs"]
-bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txree"]
 bg_color = Color(1, 0.9529412, 0.6901961, 1)
 border_width_left = 4
@@ -155,38 +30,7 @@ corner_radius_top_right = 24
 corner_radius_bottom_right = 24
 corner_radius_bottom_left = 24
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lis8p"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.11372549, 0.7254902, 0.32941177, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kox66"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.08627451, 0.61960787, 0.27450982, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_011qv"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.15686275, 0.78039217, 0.3882353, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txree"]
 
 [node name="ChallengeShell" type="Control"]
 layout_mode = 3
@@ -195,7 +39,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_txree")
 script = ExtResource("1_ueh3a")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -241,10 +84,6 @@ text = "Q 1/8"
 
 [node name="BackButton" type="Button" parent="PageContainer/Margin/Layout/TopBar"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 51
-theme_override_styles/normal = SubResource("StyleBoxFlat_vo6a5")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_whhfy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_j8ase")
 text = "Menu"
 
 [node name="TopBarSpacer" type="Control" parent="PageContainer/Margin/Layout/TopBar"]
@@ -289,28 +128,16 @@ theme_override_constants/separation = 12
 [node name="OptionAButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_p7y1d")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3xtwe")
-theme_override_styles/hover = SubResource("StyleBoxFlat_gq6um")
 text = "Click the Link"
 
 [node name="OptionBButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_t8gep")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6ieut")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ohqp5")
 text = "Ignore it"
 
 [node name="OptionCButton" type="Button" parent="PageContainer/Margin/Layout/Options"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = SubResource("StyleBoxFlat_kahjl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_apyvp")
-theme_override_styles/hover = SubResource("StyleBoxFlat_vh0hs")
 text = "Tell An Adult"
 
 [node name="Separator" type="Control" parent="PageContainer/Margin/Layout/Options"]
@@ -374,10 +201,7 @@ autowrap_mode = 2
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_lis8p")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_kox66")
-theme_override_styles/hover = SubResource("StyleBoxFlat_011qv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_txree")
 text = "Next
 "
 

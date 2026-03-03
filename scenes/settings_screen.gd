@@ -16,9 +16,9 @@ func _ready() -> void:
 
 	# Populate dropdown
 	text_size_option.clear()
-	text_size_option.add_item("Small", 0)
-	text_size_option.add_item("Normal", 1)
-	text_size_option.add_item("Large", 2)
+	text_size_option.add_item("Normal", 0)
+	text_size_option.add_item("Large", 1)
+	text_size_option.add_item("Extra Large", 2)
 
 	# Keep UI in sync if Settings change (guard against double connect)
 	if not Settings.changed.is_connected(_on_settings_changed):
@@ -38,18 +38,18 @@ func _sync_from_settings() -> void:
 	reduce_motion_toggle.button_pressed = Settings.reduce_motion
 
 	# Select dropdown based on scale
-	if Settings.text_scale <= 0.9:
+	if Settings.text_scale <= 1.0:
 		text_size_option.select(0)
-	elif Settings.text_scale >= 1.2:
+	elif Settings.text_scale >= 1.3:
 		text_size_option.select(2)
 	else:
 		text_size_option.select(1)
 
 func _on_text_size_selected(index: int) -> void:
 	match index:
-		0: Settings.set_text_scale(0.9)
-		1: Settings.set_text_scale(1.0)
-		2: Settings.set_text_scale(1.25)
+		0: Settings.set_text_scale(1.0)
+		1: Settings.set_text_scale(1.2)
+		2: Settings.set_text_scale(1.3)
 
 func _on_high_contrast_toggled(value: bool) -> void:
 	Settings.set_high_contrast(value)

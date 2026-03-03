@@ -4,10 +4,10 @@ const THEME_DEFAULT := "res://ui/themes/theme_default.tres"
 const THEME_CONTRAST := "res://ui/themes/theme_high_contrast.tres"
 
 # Base design tokens (tweak once here)
-const BASE_FONT := 26
-const BASE_BUTTON_HEIGHT := 82
-const BASE_SEPARATION := 24
-const BASE_CARD_PADDING := 28
+const BASE_FONT := 24
+const BASE_BUTTON_HEIGHT := 72
+const BASE_SEPARATION := 18
+const BASE_CARD_PADDING := 20
 
 func apply_theme(root: Control) -> void:
 	var path := THEME_CONTRAST if Settings.high_contrast else THEME_DEFAULT
@@ -20,7 +20,7 @@ func apply_theme(root: Control) -> void:
 
 	# Fonts
 	_set_font_size(t, "Label", int(round(BASE_FONT * s)))
-	_set_font_size(t, "Button", int(round((BASE_FONT - 2) * s)))
+	_set_font_size(t, "Button", int(round(BASE_FONT - 2)))
 	_set_font_size(t, "CheckButton", int(round(BASE_FONT * s)))
 	_set_font_size(t, "OptionButton", int(round(BASE_FONT * s)))
 

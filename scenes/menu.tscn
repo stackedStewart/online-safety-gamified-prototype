@@ -1,67 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://4nwf3xcpg3qf"]
+[gd_scene load_steps=3 format=3 uid="uid://4nwf3xcpg3qf"]
 
-[ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_vjb58"]
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
-bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
-bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhnvy"]
-content_margin_left = 14.0
-content_margin_top = 14.0
-content_margin_right = 14.0
-content_margin_bottom = 14.0
-bg_color = Color(0.20784314, 0.41568628, 0.4509804, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ytvr"]
-bg_color = Color(0.16862746, 0.34901962, 0.38039216, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3eks"]
-bg_color = Color(0.24705882, 0.4862745, 0.5254902, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
+[ext_resource type="Texture2D" uid="uid://dxt23h4qwmqtg" path="res://assets/ui/kenney/titleBanner/button_rectangle_depth_flat.png" id="3_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -70,7 +10,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_vjb58")
 script = ExtResource("1_yqeox")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -93,34 +32,54 @@ grow_vertical = 2
 
 [node name="Margin" type="MarginContainer" parent="CenterContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
 
 [node name="Layout" type="VBoxContainer" parent="CenterContainer/Margin"]
 layout_mode = 2
-theme_override_constants/separation = 30
 
 [node name="Header" type="VBoxContainer" parent="CenterContainer/Margin/Layout"]
 layout_mode = 2
+theme_override_constants/separation = 32
 
-[node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
+[node name="TitleWrap" type="Control" parent="CenterContainer/Margin/Layout/Header"]
+custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
-theme_override_font_sizes/font_size = 56
+size_flags_vertical = 4
+
+[node name="TitleBanner" type="NinePatchRect" parent="CenterContainer/Margin/Layout/Header/TitleWrap"]
+custom_minimum_size = Vector2(900, 140)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_con2f")
+patch_margin_left = 32
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 32
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header/TitleWrap/TitleBanner"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "STAY SAFE ONLINE"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SubtitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 28
 
 [node name="SpaceTop" type="Control" parent="CenterContainer/Margin/Layout/Header"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="SpaceHeaderCard" type="Control" parent="CenterContainer/Margin/Layout"]
-custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="MenuCard" type="PanelContainer" parent="CenterContainer/Margin/Layout"]
 custom_minimum_size = Vector2(500, 0)
@@ -130,24 +89,15 @@ size_flags_vertical = 3
 [node name="Buttons" type="VBoxContainer" parent="CenterContainer/Margin/Layout/MenuCard"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-theme_override_constants/separation = 22
 
 [node name="PlayButton" type="Button" parent="CenterContainer/Margin/Layout/MenuCard/Buttons"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_vjb58")
-theme_override_styles/hover = SubResource("StyleBoxFlat_con2f")
 text = "Play"
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/Margin/Layout/MenuCard/Buttons"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_4ytvr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_g3eks")
 text = "Settings"
 
 [node name="Footer" type="HBoxContainer" parent="CenterContainer/Margin/Layout"]
@@ -155,7 +105,6 @@ layout_mode = 2
 
 [node name="VersionLabel" type="Label" parent="CenterContainer/Margin/Layout/Footer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
 text = "v0.1"
 
 [node name="Stretch" type="Control" parent="CenterContainer/Margin/Layout/Footer"]
