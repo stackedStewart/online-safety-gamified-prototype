@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bqgs0pjt8iy6f" path="res://assets/ui/kenney/buttons/button_round_flat.png" id="2_uf2kn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpxyt"]
-content_margin_left = 18.0
-content_margin_top = 12.0
-content_margin_right = 18.0
-content_margin_bottom = 12.0
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 24.0
+content_margin_bottom = 18.0
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 corner_radius_top_left = 22
 corner_radius_top_right = 22
@@ -15,6 +15,10 @@ corner_radius_bottom_right = 22
 corner_radius_bottom_left = 22
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdybv"]
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 24.0
+content_margin_bottom = 18.0
 texture = ExtResource("1_c2lqr")
 texture_margin_left = 32.0
 texture_margin_top = 32.0
@@ -22,6 +26,10 @@ texture_margin_right = 32.0
 texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2lqr"]
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 24.0
+content_margin_bottom = 18.0
 texture = ExtResource("1_c2lqr")
 texture_margin_left = 32.0
 texture_margin_top = 32.0
@@ -29,6 +37,10 @@ texture_margin_right = 32.0
 texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rh7o4"]
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 24.0
+content_margin_bottom = 18.0
 texture = ExtResource("2_uf2kn")
 texture_margin_left = 32.0
 texture_margin_top = 32.0

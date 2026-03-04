@@ -145,3 +145,22 @@ func apply_accessibility() -> void:
 
 	# Apply theme scaling (fonts + spacing + padding)
 	UITheme.apply_theme(self)
+	
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"): # Enter/Space by default
+		_print_layout_sizes()
+
+func _print_layout_sizes() -> void:
+	var layout := $PageContainer/Margin/Layout
+	print("--- LAYOUT SIZES ---")
+	print("Viewport: ", get_viewport_rect().size)
+	print("Layout: ", layout.size)
+	print("--- OPTIONS DETAILS ---")
+	print("OptionA size=", option_a.size, " min=", option_a.get_combined_minimum_size())
+	print("OptionB size=", option_b.size, " min=", option_b.get_combined_minimum_size())
+	print("OptionC size=", option_c.size, " min=", option_c.get_combined_minimum_size())
+	#print("Options sep=", (Options as VBoxContainer).get_theme_constant("separation"))
+
+	for child in layout.get_children():
+		if child is Control:
+			print(child.name, " size=", (child as Control).size, " min=", (child as Control).custom_minimum_size)

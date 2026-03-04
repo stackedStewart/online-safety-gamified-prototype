@@ -27,9 +27,10 @@ func apply_accessibility() -> void:
 	if bg != null and bg is ColorRect:
 		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#AEE6FF")
 		
-	UITheme.apply_theme(self)
+	
 	
 	var title := $CenterContainer/Margin/Layout/Header/TitleWrap/TitleBanner/TitleLabel
 	if title:
 		title.add_theme_font_size_override("font_size", int(36 * Settings.text_scale))
 	
+	UITheme.apply_theme(self)

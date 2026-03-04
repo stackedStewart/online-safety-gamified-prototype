@@ -59,7 +59,7 @@ patch_margin_top = 32
 patch_margin_right = 32
 patch_margin_bottom = 32
 
-[node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header/TitleWrap/TitleBanner"]
+[node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header/TitleWrap/TitleBanner" groups=["ui_title"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -70,7 +70,7 @@ text = "STAY SAFE ONLINE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SubtitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header"]
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header" groups=["ui_hud", "ui_title"]]
 layout_mode = 2
 
 [node name="SpaceTop" type="Control" parent="CenterContainer/Margin/Layout/Header"]
