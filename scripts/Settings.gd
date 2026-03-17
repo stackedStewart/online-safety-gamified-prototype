@@ -2,6 +2,8 @@ extends Node
 
 signal changed
 
+
+
 # --- Accessibility ---
 var text_scale: float = 1.0
 var high_contrast: bool = false

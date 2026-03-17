@@ -63,6 +63,30 @@
 	  "correct_index": 2,
 	  "feedback_correct": "Excellent! Never tell strangers where you live. Tell a trusted adult.",
 	  "feedback_wrong": "Nice try! Never tell strangers where you live. Tell a trusted adult."
-	}
+	},
+	{
+  "id": "strong_password",
+  "prompt": "You need to make a password. Which one is the safest?",
+  "options": ["sunshine123", "T!g3r$Blue42", "myname2015"],
+  "correct_index": 1,
+  "feedback_correct": "Great choice! A strong password uses letters, numbers and symbols.",
+  "feedback_wrong": "Nice try! Strong passwords mix letters, numbers and symbols. Avoid easy words."
+},
+{
+  "id": "cyberbully_message",
+  "prompt": "Someone sends you a mean message online. What should you do?",
+  "options": ["Block and tell a trusted adult", "Send a mean message back", "Ignore it forever"],
+  "correct_index": 0,
+  "feedback_correct": "Well done! Blocking and telling a trusted adult is the safest response.",
+  "feedback_wrong": "Nice try! The best thing is to block them and tell a trusted adult."
+},
+{
+  "id": "safe_website",
+  "prompt": "You want to look something up for school. Which website is the safest to use?",
+  "options": ["A website your teacher recommended", "A random pop-up website", "Tell an adult"],
+  "correct_index": 0,
+  "feedback_correct": "Excellent! Trusted websites recommended by teachers are the safest choice.",
+  "feedback_wrong": "Good thinking, but a teacher-recommended site is the most reliable option."
+}
   ]
 }
