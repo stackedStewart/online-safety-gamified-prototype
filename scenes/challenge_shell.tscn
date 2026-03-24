@@ -60,45 +60,69 @@ grow_vertical = 2
 
 [node name="Margin" type="MarginContainer" parent="PageContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 60
 
 [node name="Layout" type="VBoxContainer" parent="PageContainer/Margin"]
 layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
 
 [node name="TopBar" type="HBoxContainer" parent="PageContainer/Margin/Layout"]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="BackButton" type="Button" parent="PageContainer/Margin/Layout/TopBar"]
+custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_font_sizes/font_size = 26
+text = "Menu"
 
 [node name="QuestionCounterLabel" type="Label" parent="PageContainer/Margin/Layout/TopBar" groups=["ui_hud"]]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Q 1/8"
-
-[node name="BackButton" type="Button" parent="PageContainer/Margin/Layout/TopBar"]
-layout_mode = 2
-text = "Menu"
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 30
+text = "Question: 1/8"
+horizontal_alignment = 1
 
 [node name="TopBarSpacer" type="Control" parent="PageContainer/Margin/Layout/TopBar"]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="XPLabel" type="Label" parent="PageContainer/Margin/Layout/TopBar" groups=["ui_hud"]]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "XP: 0
+size_flags_horizontal = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 30
+text = "STARS: 0
 "
+horizontal_alignment = 1
 
 [node name="TitleLabel" type="Label" parent="PageContainer/Margin/Layout"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 30
-text = "Is this safe?"
+text = "Safety Question
+"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="ScenarioCard" type="PanelContainer" parent="PageContainer/Margin/Layout"]
+custom_minimum_size = Vector2(620, 220)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_ueh3a")
 
 [node name="ScenarioMargin" type="MarginContainer" parent="PageContainer/Margin/Layout/ScenarioCard"]
 layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
 
 [node name="ScenarioLabel" type="Label" parent="PageContainer/Margin/Layout/ScenarioCard/ScenarioMargin"]
 custom_minimum_size = Vector2(160, 160)
@@ -112,6 +136,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Options" type="VBoxContainer" parent="PageContainer/Margin/Layout"]
+custom_minimum_size = Vector2(560, 58)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 12
@@ -131,7 +156,11 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "Tell An Adult"
 
+[node name="Control" type="Control" parent="PageContainer/Margin/Layout"]
+layout_mode = 2
+
 [node name="FeedbackOverlay" type="Control" parent="."]
+visible = false
 z_index = 10
 layout_mode = 1
 anchors_preset = 15
