@@ -27,9 +27,9 @@ func _ready() -> void:
 	overlay.visible = false
 
 	back_button.pressed.connect(_on_back_pressed)
-	option_a.pressed.connect(func(): _on_option_pressed(0))
-	option_b.pressed.connect(func(): _on_option_pressed(1))
-	option_c.pressed.connect(func(): _on_option_pressed(2))
+	option_a.pressed.connect(func(): _on_option_pressed(option_a))
+	option_b.pressed.connect(func(): _on_option_pressed(option_b))
+	option_c.pressed.connect(func(): _on_option_pressed(option_c))
 	next_button.pressed.connect(_on_next_pressed)
 
 	_load_scenarios()
@@ -78,9 +78,41 @@ func _show_current() -> void:
 
 	scenario_label.text = str(s.get("prompt", ""))
 	var opts: Array = s.get("options", [])
-	option_a.text = str(opts[0]) if opts.size() > 0 else "Option A"
-	option_b.text = str(opts[1]) if opts.size() > 1 else "Option B"
-	option_c.text = str(opts[2]) if opts.size() > 2 else "Option C"
+	var correct_index: int = int(s.get("correct_index", 0))
+	
+	var answers: Array[Dictionary] = []
+	
+	for i in range(opts.size()):
+		answers.append({
+			"text": str(opts[i]),
+			"is_correct": i == correct_index
+		})
+		
+	answers.shuffle() # uses engines Random number generator
+	
+	var buttons := [option_a, option_b, option_c]
+	
+	for i in range(buttons.size()):
+		var button: Button = buttons[i]
+		
+		if i < answers.size():
+			button.text = answers[i]["text"]
+			button.set_meta("is_correct", answers[i]["is_correct"])
+			button.disabled = false
+			button.visible = true
+		else:
+			button.text = "Option"
+			button.set_meta("is_corect", false)
+			button.disabled = true
+			button.visible = false
+			
+			
+	
+	
+	
+	#option_a.text = str(opts[0]) if opts.size() > 0 else "Option A"
+	#option_b.text = str(opts[1]) if opts.size() > 1 else "Option B"
+	#option_c.text = str(opts[2]) if opts.size() > 2 else "Option C"
 
 	option_a.disabled = false
 	option_b.disabled = false
@@ -93,13 +125,12 @@ func _show_current() -> void:
 func _update_xp() -> void:
 	xp_label.text = "Stars: %d" % GameState.xp
 
-func _on_option_pressed(chosen_index: int) -> void:
+func _on_option_pressed(button: Button) -> void:
 	if awaiting_next:
 		return
 
 	var s: Dictionary = scenarios[current_index]
-	var correct_index: int = int(s.get("correct_index", 0))
-	var is_correct := chosen_index == correct_index
+	var is_correct: bool = bool(button.get_meta("is_correct", false))
 
 	var correct_msg := str(s.get("feedback_correct", "Well done!"))
 	var wrong_msg := str(s.get("feedback_wrong", "Nice try!"))
