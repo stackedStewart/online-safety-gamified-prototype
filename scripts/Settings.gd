@@ -6,11 +6,11 @@ signal changed
 
 # --- Accessibility ---
 var text_scale: float = 1.0
-var high_contrast: bool = false
-var reduce_motion: bool = false
+var high_contrast: bool = false # disabled by default
+var reduce_motion: bool = false # disabled by default
 
 # --- Audio ---
-var sound_enabled: bool = true
+var sound_enabled: bool = true # enabled by default
 
 func set_text_scale(value: float) -> void:
 	text_scale = value

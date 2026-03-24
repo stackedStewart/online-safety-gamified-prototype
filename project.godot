@@ -14,6 +14,8 @@ config/name="online-safety-gamified-application"
 run/main_scene="uid://c1o7cfu53icnv"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+config/snap/snap_2d_transforms_to_pixel=false
+config/hdr_2d=false
 
 [autoload]
 
@@ -29,5 +31,7 @@ window/stretch/mode="canvas_items"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

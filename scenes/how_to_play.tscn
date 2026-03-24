@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=3 uid="uid://drkncs0ktmyby"]
+
+[ext_resource type="Script" uid="uid://cvtflwxi0y7x1" path="res://scenes/how_to_play.gd" id="1_d4i75"]
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d4i75")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.40392157, 0.76862746, 0.8666667, 1)
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 60
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="TopSpacer" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Margin/Layout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "HOW TO PLAY"
+horizontal_alignment = 1
+
+[node name="TitleGap" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+
+[node name="InstructionWrap" type="CenterContainer" parent="Margin/Layout"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="InstructionColumn" type="VBoxContainer" parent="Margin/Layout/InstructionWrap"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Step1Label" type="Label" parent="Margin/Layout/InstructionWrap/InstructionColumn"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Read each online safety question"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Step2Label" type="Label" parent="Margin/Layout/InstructionWrap/InstructionColumn"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Choose the answer you think is safest"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Step3Label" type="Label" parent="Margin/Layout/InstructionWrap/InstructionColumn"]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Learn from the feedback after each choice"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonGap" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+
+[node name="ButtonWrap" type="CenterContainer" parent="Margin/Layout"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ButtonColumn" type="VBoxContainer" parent="Margin/Layout/ButtonWrap"]
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="PlayNowButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(300, 64)
+layout_mode = 2
+text = "PLAY NOW"
+
+[node name="BackButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(300, 64)
+layout_mode = 2
+text = "BACK"
+
+[node name="BottomSpacer" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2

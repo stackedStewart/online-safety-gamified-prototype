@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://4nwf3xcpg3qf"]
+[gd_scene load_steps=2 format=3 uid="uid://4nwf3xcpg3qf"]
 
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
-[ext_resource type="Texture2D" uid="uid://dxt23h4qwmqtg" path="res://assets/ui/kenney/titleBanner/button_rectangle_depth_flat.png" id="3_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,95 +18,67 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.43529412, 0.827451, 1, 1)
+color = Color(0.40392157, 0.76862746, 0.8666667, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-custom_minimum_size = Vector2(900, 0)
+[node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 60
 
-[node name="Margin" type="MarginContainer" parent="CenterContainer"]
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+alignment = 1
+
+[node name="TopSpacer" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 
-[node name="Layout" type="VBoxContainer" parent="CenterContainer/Margin"]
+[node name="TitleLabel" type="Label" parent="Margin/Layout"]
 layout_mode = 2
-
-[node name="Header" type="VBoxContainer" parent="CenterContainer/Margin/Layout"]
-layout_mode = 2
-theme_override_constants/separation = 32
-
-[node name="TitleWrap" type="Control" parent="CenterContainer/Margin/Layout/Header"]
-custom_minimum_size = Vector2(0, 160)
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="TitleBanner" type="NinePatchRect" parent="CenterContainer/Margin/Layout/Header/TitleWrap"]
-custom_minimum_size = Vector2(900, 140)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_con2f")
-patch_margin_left = 32
-patch_margin_top = 32
-patch_margin_right = 32
-patch_margin_bottom = 32
-
-[node name="TitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header/TitleWrap/TitleBanner" groups=["ui_title"]]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "STAY SAFE ONLINE"
+theme_override_font_sizes/font_size = 40
+text = "MAIN MENU"
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="SubtitleLabel" type="Label" parent="CenterContainer/Margin/Layout/Header" groups=["ui_hud", "ui_title"]]
+[node name="TitleGap" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 36)
 layout_mode = 2
 
-[node name="SpaceTop" type="Control" parent="CenterContainer/Margin/Layout/Header"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="SpaceHeaderCard" type="Control" parent="CenterContainer/Margin/Layout"]
+[node name="ButtonWrap" type="CenterContainer" parent="Margin/Layout"]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="MenuCard" type="PanelContainer" parent="CenterContainer/Margin/Layout"]
-custom_minimum_size = Vector2(500, 0)
+[node name="ButtonColumn" type="VBoxContainer" parent="Margin/Layout/ButtonWrap"]
 layout_mode = 2
-size_flags_vertical = 3
+theme_override_constants/separation = 18
+alignment = 1
 
-[node name="Buttons" type="VBoxContainer" parent="CenterContainer/Margin/Layout/MenuCard"]
-custom_minimum_size = Vector2(100, 0)
+[node name="PlayButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(320, 64)
 layout_mode = 2
+text = "PLAY NOW"
 
-[node name="PlayButton" type="Button" parent="CenterContainer/Margin/Layout/MenuCard/Buttons"]
-custom_minimum_size = Vector2(0, 80)
+[node name="HowToPlayButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(320, 64)
 layout_mode = 2
-text = "Play"
+text = "HOW TO PLAY"
 
-[node name="SettingsButton" type="Button" parent="CenterContainer/Margin/Layout/MenuCard/Buttons"]
-custom_minimum_size = Vector2(0, 80)
+[node name="SettingsButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(320, 64)
 layout_mode = 2
-text = "Settings"
+text = "SETTINGS"
 
-[node name="Footer" type="HBoxContainer" parent="CenterContainer/Margin/Layout"]
+[node name="BackButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(320, 64)
 layout_mode = 2
+text = "BACK"
 
-[node name="VersionLabel" type="Label" parent="CenterContainer/Margin/Layout/Footer"]
+[node name="BottomSpacer" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-text = "v0.1"
-
-[node name="Stretch" type="Control" parent="CenterContainer/Margin/Layout/Footer"]
-layout_mode = 2
-
-[connection signal="pressed" from="CenterContainer/Margin/Layout/MenuCard/Buttons/SettingsButton" to="." method="_on_settings_button_pressed"]
