@@ -21,4 +21,4 @@ func apply_accessibility() -> void:
 	if Settings.high_contrast:
 		background.color = Color.BLACK
 	else:
-		background.color = Color("6fd3ff")
+		background.color = Color("67c4dd")

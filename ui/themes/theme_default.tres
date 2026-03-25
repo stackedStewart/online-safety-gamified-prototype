@@ -52,7 +52,7 @@ content_margin_left = 20.0
 content_margin_top = 20.0
 content_margin_right = 20.0
 content_margin_bottom = 20.0
-bg_color = Color(0.84705883, 0.8352941, 0.69803923, 1)
+bg_color = Color(0.8465653, 0.83397764, 0.6969193, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -65,7 +65,7 @@ corner_radius_bottom_right = 36
 corner_radius_bottom_left = 36
 
 [resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.46666667, 0.46666667, 0.46666667, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -74,6 +74,6 @@ Button/styles/hover = SubResource("StyleBoxTexture_hdybv")
 Button/styles/normal = SubResource("StyleBoxTexture_c2lqr")
 Button/styles/pressed = SubResource("StyleBoxTexture_rh7o4")
 CheckButton/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
-Label/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+Label/colors/font_color = Color(1, 1, 1, 1)
 OptionButton/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_hdybv")
