@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://beh3d7xnb6hkw"]
+[gd_scene load_steps=5 format=3 uid="uid://beh3d7xnb6hkw"]
 
 [ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_21kdr"]
 [ext_resource type="Script" uid="uid://p8ciulm2ak8a" path="res://scenes/results.gd" id="1_qh7lt"]
+[ext_resource type="PackedScene" uid="uid://ditm5y1oc6lft" path="res://survey_overlay.tscn" id="3_r4wmc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qh7lt"]
 bg_color = Color(0.7490196, 0.96862745, 0.9019608, 1)
@@ -86,14 +87,25 @@ theme_override_font_sizes/font_size = 23
 layout_mode = 2
 
 [node name="NextChallengeButton" type="Button" parent="PageCenter/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 
 [node name="BackToMenuButton" type="Button" parent="PageCenter/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
+
+[node name="FeedbackButton" type="Button" parent="PageCenter/Margin/Layout/Buttons"]
+custom_minimum_size = Vector2(280, 50)
+layout_mode = 2
+text = "LEAVE FEEDBACK"
 
 [node name="Footer" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
 
 [node name="VersionLabel" type="Label" parent="PageCenter/Margin/Layout/Footer"]
 layout_mode = 2
+
+[node name="SurveyOverlay" parent="." instance=ExtResource("3_r4wmc")]
+visible = false
+layout_mode = 1

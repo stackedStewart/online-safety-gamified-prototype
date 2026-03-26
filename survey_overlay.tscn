@@ -1,13 +1,15 @@
-[gd_scene format=3 uid="uid://ditm5y1oc6lft"]
+[gd_scene load_steps=2 format=3 uid="uid://ditm5y1oc6lft"]
+
+[ext_resource type="Script" uid="uid://cqbhry2tjmbhf" path="res://survey_overlay.gd" id="1_hm3m1"]
 
 [node name="SurveyOverlay" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hm3m1")
 
 [node name="Dimmer" type="ColorRect" parent="."]
 layout_mode = 1
@@ -19,31 +21,53 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel" type="PanelContainer" parent="CenterContainer"]
 layout_mode = 2
 
 [node name="PanelMargin" type="MarginContainer" parent="CenterContainer/Panel"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 28
 
 [node name="PanelLayout" type="VBoxContainer" parent="CenterContainer/Panel/PanelMargin"]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Help Improve this Prototype"
+horizontal_alignment = 1
 
 [node name="BodyLabel" type="Label" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
+custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
-text = "If Yo"
+text = "If you would like to leave feedback, you can open a short Google Form below.
+* No personal information will be taken, and is completely optional"
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ButtonGap" type="Control" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
+custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 
 [node name="OpenFormButton" type="Button" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
+custom_minimum_size = Vector2(320, 60)
 layout_mode = 2
+text = "OPEN FEEDBACK FORM"
 
 [node name="CloseButton" type="Button" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
+custom_minimum_size = Vector2(220, 56)
 layout_mode = 2
+text = "CLOSE"

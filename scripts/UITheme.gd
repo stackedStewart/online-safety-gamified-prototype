@@ -6,17 +6,17 @@ const THEME_CONTRAST := "res://ui/themes/theme_high_contrast.tres"
 # Base design tokens
 const BASE_FONT := 26
 const BASE_BUTTON_HEIGHT := 82
-const BASE_SEPARATION := 24
+const BASE_SEPARATION := 5
 const BASE_CARD_PADDING := 24
 const BASE_SCREEN_MARGIN := 36  # NEW
 
 # Clamp limits (to prevent overflow at Extra Large)
-const MAX_BUTTON_HEIGHT := 90
-const MAX_SEPARATION := 20
-const MAX_CARD_PADDING := 28
-const MAX_SCREEN_MARGIN := 40    # NEW
-const MAX_TITLE_FONT := 48
-const MAX_HUD_FONT := 40
+const MAX_BUTTON_HEIGHT := 80
+const MAX_SEPARATION := 15
+const MAX_CARD_PADDING := 22
+const MAX_SCREEN_MARGIN := 30    # NEW
+const MAX_TITLE_FONT := 40
+const MAX_HUD_FONT := 48
 
 const TITLE_MULT := 1.35
 const HUD_MULT := 1.15

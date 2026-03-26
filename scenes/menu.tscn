@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://4nwf3xcpg3qf"]
+[gd_scene load_steps=5 format=3 uid="uid://4nwf3xcpg3qf"]
 
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://dxt23h4qwmqtg" path="res://assets/ui/kenney/titleBanner/button_rectangle_depth_flat.png" id="2_vjb58"]
 [ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="3_con2f"]
+[ext_resource type="PackedScene" uid="uid://ditm5y1oc6lft" path="res://survey_overlay.tscn" id="4_mhnvy"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,7 +40,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Margin/Layout"]
-custom_minimum_size = Vector2(500, 100)
+custom_minimum_size = Vector2(400, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_vjb58")
@@ -49,15 +50,20 @@ patch_margin_right = 25
 patch_margin_bottom = 50
 
 [node name="TitleLabel" type="Label" parent="Margin/Layout/NinePatchRect"]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 22.0
-offset_right = 493.0
-offset_bottom = 88.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -27.0
+offset_right = 442.0
+offset_bottom = 39.0
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_con2f")
 theme_override_font_sizes/font_size = 40
 text = "MAIN MENU"
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="TopSpacer" type="Control" parent="Margin/Layout"]
 custom_minimum_size = Vector2(0, 10)
@@ -77,25 +83,34 @@ theme_override_constants/separation = 18
 alignment = 1
 
 [node name="PlayButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
-custom_minimum_size = Vector2(320, 64)
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
 text = "PLAY NOW"
 
 [node name="HowToPlayButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
-custom_minimum_size = Vector2(320, 64)
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
 text = "HOW TO PLAY"
 
 [node name="SettingsButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
-custom_minimum_size = Vector2(320, 64)
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
 text = "SETTINGS"
 
 [node name="BackButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
-custom_minimum_size = Vector2(320, 64)
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
 text = "BACK"
+
+[node name="FeedbackButton" type="Button" parent="Margin/Layout/ButtonWrap/ButtonColumn"]
+custom_minimum_size = Vector2(280, 50)
+layout_mode = 2
+text = "LEAVE FEEDBACK"
 
 [node name="BottomSpacer" type="Control" parent="Margin/Layout"]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
+
+[node name="SurveyOverlay" parent="." instance=ExtResource("4_mhnvy")]
+visible = false
+layout_mode = 1

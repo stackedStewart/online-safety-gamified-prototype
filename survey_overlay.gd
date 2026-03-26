@@ -1,11 +1,23 @@
 extends Control
 
+@export var form_url: String = "https://forms.gle/6c9UK3gdxmFZ1NRP9"
 
-# Called when the node enters the scene tree for the first time.
+@onready var open_form_button: Button = $CenterContainer/Panel/PanelMargin/PanelLayout/OpenFormButton
+@onready var close_button: Button = $CenterContainer/Panel/PanelMargin/PanelLayout/CloseButton
+
 func _ready() -> void:
-	pass # Replace with function body.
+	open_form_button.pressed.connect(_on_open_form_pressed)
+	close_button.pressed.connect(_on_close_pressed)
 
+func show_overlay() -> void:
+	visible = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func hide_overlay() -> void:
+	visible = false
+
+func _on_open_form_pressed() -> void:
+	if form_url.strip_edges() != "":
+		OS.shell_open(form_url)
+
+func _on_close_pressed() -> void:
+	hide_overlay()

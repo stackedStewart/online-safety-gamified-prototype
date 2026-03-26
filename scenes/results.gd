@@ -9,6 +9,9 @@ extends Control
 @onready var try_again_button: Button = $PageCenter/Margin/Layout/Buttons/NextChallengeButton
 @onready var back_to_menu_button: Button = $PageCenter/Margin/Layout/Buttons/BackToMenuButton
 
+@onready var feedback_button: Button = $PageCenter/Margin/Layout/Buttons/FeedbackButton
+@onready var survey_overlay: Control = $SurveyOverlay
+
 func _ready() -> void:
 	Settings.changed.connect(apply_accessibility)
 	apply_accessibility()
@@ -24,11 +27,13 @@ func _ready() -> void:
 	badge_label.text = "Correct answers: %d / %d (%d%%)" % [correct, total, accuracy]
 	reminder_label.text = _message_for_score(correct, total)
 
-	try_again_button.text = "Try again"
-	back_to_menu_button.text = "Back to menu"
+	try_again_button.text = "TRY AGAIN"
+	back_to_menu_button.text = "MENU"
+	feedback_button.text = "FEEDBACK FORM"
 
 	try_again_button.pressed.connect(_on_try_again)
 	back_to_menu_button.pressed.connect(_on_back_to_menu)
+	feedback_button.pressed.connect(_on_feedback_pressed)
 
 func _message_for_score(correct: int, total: int) -> String:
 	if correct >= total:
@@ -46,6 +51,9 @@ func _on_try_again() -> void:
 
 func _on_back_to_menu() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	
+func _on_feedback_pressed() -> void:
+	survey_overlay.show_overlay()
 
 func apply_accessibility() -> void:
 	# Apply theme scaling (fonts + spacing + padding)
