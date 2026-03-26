@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.43529412, 0.827451, 1, 1)
+color = Color(0.40392157, 0.76862746, 0.8666667, 1)
 
 [node name="PageCenter" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -30,6 +30,10 @@ grow_vertical = 2
 
 [node name="Margin" type="MarginContainer" parent="PageCenter"]
 layout_mode = 2
+theme_override_constants/margin_left = 65
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 80
 
 [node name="Layout" type="VBoxContainer" parent="PageCenter/Margin"]
 layout_mode = 2
@@ -42,6 +46,7 @@ horizontal_alignment = 1
 
 [node name="TextSizeRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
+size_flags_vertical = 0
 
 [node name="TextSizeLabel" type="Label" parent="PageCenter/Margin/Layout/TextSizeRow"]
 layout_mode = 2

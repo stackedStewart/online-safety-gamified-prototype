@@ -1,25 +1,26 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://bkjc1ko5b2tj7"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bkjc1ko5b2tj7"]
 
 [ext_resource type="Texture2D" uid="uid://l738fu23t0x3" path="res://assets/ui/kenney/buttons/button_round_depth_flat.png" id="1_c2lqr"]
+[ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="1_uf2kn"]
 [ext_resource type="Texture2D" uid="uid://bqgs0pjt8iy6f" path="res://assets/ui/kenney/buttons/button_round_flat.png" id="2_uf2kn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpxyt"]
 content_margin_left = 24.0
-content_margin_top = 18.0
+content_margin_top = 24.0
 content_margin_right = 24.0
-content_margin_bottom = 18.0
+content_margin_bottom = 24.0
 bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
-corner_radius_top_left = 22
-corner_radius_top_right = 22
-corner_radius_bottom_right = 22
-corner_radius_bottom_left = 22
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdybv"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uf2kn"]
 content_margin_left = 24.0
 content_margin_top = 18.0
 content_margin_right = 24.0
 content_margin_bottom = 18.0
-texture = ExtResource("1_c2lqr")
+texture = ExtResource("2_uf2kn")
 texture_margin_left = 32.0
 texture_margin_top = 32.0
 texture_margin_right = 32.0
@@ -67,10 +68,11 @@ corner_radius_bottom_left = 36
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.46666667, 0.46666667, 0.46666667, 1)
-Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.427493, 0.42749307, 0.42749307, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_uf2kn")
 Button/styles/disabled = SubResource("StyleBoxFlat_xpxyt")
-Button/styles/hover = SubResource("StyleBoxTexture_hdybv")
+Button/styles/hover = SubResource("StyleBoxTexture_uf2kn")
 Button/styles/normal = SubResource("StyleBoxTexture_c2lqr")
 Button/styles/pressed = SubResource("StyleBoxTexture_rh7o4")
 CheckButton/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)

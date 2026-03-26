@@ -1,0 +1,53 @@
+<svg width="100%" viewBox="0 0 680 429.31" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Glow ring behind shield -->
+  <ellipse cx="340" cy="195" rx="115" ry="118" fill="#FAC775" opacity="0.18" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <ellipse cx="340" cy="195" rx="100" ry="102" fill="#FAC775" opacity="0.12" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.12;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shield body -->
+  <path d="M340 72 L430 108 L430 200 Q430 270 340 312 Q250 270 250 200 L250 108 Z" fill="#185FA5" stroke="#0C447C" stroke-width="2.5" style="fill:rgb(24, 95, 165);stroke:rgb(12, 68, 124);color:rgb(255, 255, 255);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Shield inner bevel -->
+  <path d="M340 88 L418 120 L418 198 Q418 258 340 296 Q262 258 262 198 L262 120 Z" fill="#378ADD" opacity="0.35" style="fill:rgb(55, 138, 221);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Star on shield -->
+  <polygon points="340,128 352,160 386,160 360,180 370,213 340,193 310,213 320,180 294,160 328,160" fill="#FAC775" stroke="#BA7517" stroke-width="1.5" style="fill:rgb(250, 199, 117);stroke:rgb(186, 117, 23);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Helmet visor highlight -->
+  <path d="M310 150 Q340 140 370 150" stroke="#E6F1FB" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5" style="fill:none;stroke:rgb(230, 241, 251);color:rgb(255, 255, 255);stroke-width:3px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cape left -->
+  <path d="M255 165 Q200 200 210 290 Q230 330 260 340 L260 270 Q258 220 270 195 Z" fill="#A32D2D" stroke="#791F1F" stroke-width="1.5" style="fill:rgb(163, 45, 45);stroke:rgb(121, 31, 31);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cape right -->
+  <path d="M425 165 Q480 200 470 290 Q450 330 420 340 L420 270 Q422 220 410 195 Z" fill="#A32D2D" stroke="#791F1F" stroke-width="1.5" style="fill:rgb(163, 45, 45);stroke:rgb(121, 31, 31);color:rgb(255, 255, 255);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Cape inner sheen -->
+  <path d="M260 190 Q258 240 262 280" stroke="#E24B4A" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round" style="fill:none;stroke:rgb(226, 75, 74);color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <path d="M420 190 Q422 240 418 280" stroke="#E24B4A" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round" style="fill:none;stroke:rgb(226, 75, 74);color:rgb(255, 255, 255);stroke-width:2px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Wifi / signal arc (online safety symbol) on shield -->
+  <path d="M315 232 Q340 215 365 232" stroke="#FAC775" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9" style="fill:none;stroke:rgb(250, 199, 117);color:rgb(255, 255, 255);stroke-width:3px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <path d="M305 245 Q340 222 375 245" stroke="#FAC775" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65" style="fill:none;stroke:rgb(250, 199, 117);color:rgb(255, 255, 255);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.65;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="340" cy="256" r="5" fill="#FAC775" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Sparkle stars around -->
+  <g fill="#FAC775" opacity="0.85" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.85;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+    <polygon points="200,108 204,120 216,120 206,128 210,140 200,132 190,140 194,128 184,120 196,120" transform="scale(0.55) translate(170,100)" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <polygon points="490,80 493,89 502,89 495,94 498,104 490,99 482,104 485,94 478,89 487,89" transform="scale(0.45) translate(640,100)" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <polygon points="190,310 193,319 202,319 195,324 198,334 190,329 182,334 185,324 178,319 187,319" transform="scale(0.4) translate(300,520)" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <polygon points="490,290 493,299 502,299 495,304 498,314 490,309 482,314 485,304 478,299 487,299" transform="scale(0.4) translate(830,510)" style="fill:rgb(250, 199, 117);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  </g>
+
+  <!-- App name -->
+  <text x="340" y="360" text-anchor="middle" font-family="var(--font-sans)" font-size="36" font-weight="500" fill="#0C447C" letter-spacing="1" style="fill:rgb(12, 68, 124);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:36px;font-weight:500;text-anchor:middle;dominant-baseline:auto">SafeGuard</text>
+  <text x="340" y="393" text-anchor="middle" font-family="var(--font-sans)" font-size="22" font-weight="400" fill="#378ADD" letter-spacing="4" style="fill:rgb(55, 138, 221);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:22px;font-weight:400;text-anchor:middle;dominant-baseline:auto">SCOUTS</text>
+
+  <!-- Tagline -->
+  <text x="340" y="416" text-anchor="middle" font-family="var(--font-sans)" font-size="12" fill="#888780" style="fill:rgb(136, 135, 128);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:middle;dominant-baseline:auto">Your online superhero team</text>
+</svg>

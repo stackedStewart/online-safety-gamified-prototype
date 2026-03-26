@@ -41,7 +41,7 @@ func apply_accessibility() -> void:
 		
 	
 	
-	var title := $Margin/Layout/TitleLabel
+	var title := $Margin/Layout/NinePatchRect/TitleLabel
 	if title:
 		title.add_theme_font_size_override("font_size", int(36 * Settings.text_scale))
 	

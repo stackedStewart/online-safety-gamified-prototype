@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://4nwf3xcpg3qf"]
+[gd_scene load_steps=4 format=3 uid="uid://4nwf3xcpg3qf"]
 
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://dxt23h4qwmqtg" path="res://assets/ui/kenney/titleBanner/button_rectangle_depth_flat.png" id="2_vjb58"]
+[ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="3_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -36,15 +38,30 @@ theme_override_constants/margin_bottom = 60
 layout_mode = 2
 alignment = 1
 
-[node name="TopSpacer" type="Control" parent="Margin/Layout"]
-custom_minimum_size = Vector2(0, 70)
+[node name="NinePatchRect" type="NinePatchRect" parent="Margin/Layout"]
+custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vjb58")
+patch_margin_left = 25
+patch_margin_top = 50
+patch_margin_right = 25
+patch_margin_bottom = 50
 
-[node name="TitleLabel" type="Label" parent="Margin/Layout"]
-layout_mode = 2
+[node name="TitleLabel" type="Label" parent="Margin/Layout/NinePatchRect"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 22.0
+offset_right = 493.0
+offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("3_con2f")
 theme_override_font_sizes/font_size = 40
 text = "MAIN MENU"
 horizontal_alignment = 1
+
+[node name="TopSpacer" type="Control" parent="Margin/Layout"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
 
 [node name="TitleGap" type="Control" parent="Margin/Layout"]
 custom_minimum_size = Vector2(0, 36)

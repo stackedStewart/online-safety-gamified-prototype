@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4r0s3tvmvqts"]
+[gd_scene load_steps=5 format=3 uid="uid://c4r0s3tvmvqts"]
 
 [ext_resource type="Script" uid="uid://vvea4yfmd6iq" path="res://scenes/start.gd" id="1_jaeev"]
 [ext_resource type="Texture2D" uid="uid://dxt23h4qwmqtg" path="res://assets/ui/kenney/titleBanner/button_rectangle_depth_flat.png" id="2_bodal"]
-[ext_resource type="Texture2D" uid="uid://c3sar0fw0qtyt" path="res://assets/ui/kenney/icon/arrow_decorative_s.png" id="2_u80x2"]
+[ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="3_kdmts"]
+[ext_resource type="Texture2D" uid="uid://b24femklid7ac" path="res://assets/ui/kenney/titleBanner/safeguard_scouts_logo.svg" id="4_kdmts"]
 
 [node name="Start" type="Control"]
 layout_mode = 3
@@ -35,30 +36,29 @@ theme_override_constants/margin_right = 80
 theme_override_constants/margin_bottom = 60
 
 [node name="Layout" type="VBoxContainer" parent="Margin"]
+custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 0
+theme_override_constants/separation = 25
 alignment = 1
 
 [node name="TopSpacer" type="Control" parent="Margin/Layout"]
-custom_minimum_size = Vector2(0, 60)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="TitleWrap" type="VBoxContainer" parent="Margin/Layout"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 theme_override_constants/separation = 10
 alignment = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Margin/Layout/TitleWrap"]
 layout_mode = 2
+size_flags_vertical = 3
 texture = ExtResource("2_bodal")
 patch_margin_left = 35
-patch_margin_top = 35
+patch_margin_top = 50
 patch_margin_right = 35
-patch_margin_bottom = 60
+patch_margin_bottom = 50
 
 [node name="TitleLabel" type="Label" parent="Margin/Layout/TitleWrap/NinePatchRect"]
 layout_mode = 1
@@ -68,8 +68,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_kdmts")
 theme_override_font_sizes/font_size = 52
-text = "Safety Quest"
+text = "SafeGuard Heroes"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -78,6 +79,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Learn How to Stay Safe Online"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MiddleGap" type="Control" parent="Margin/Layout"]
 custom_minimum_size = Vector2(0, 24)
@@ -85,16 +87,18 @@ layout_mode = 2
 
 [node name="IconWrap" type="CenterContainer" parent="Margin/Layout"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="IconTexture" type="TextureRect" parent="Margin/Layout/IconWrap"]
-custom_minimum_size = Vector2(140, 140)
+custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
-texture = ExtResource("2_u80x2")
+texture = ExtResource("4_kdmts")
 expand_mode = 3
 stretch_mode = 5
 
 [node name="LargeGap" type="Control" parent="Margin/Layout"]
-custom_minimum_size = Vector2(0, 32)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="ButtonWrap" type="CenterContainer" parent="Margin/Layout"]
@@ -103,6 +107,7 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="Margin/Layout/ButtonWrap"]
 custom_minimum_size = Vector2(280, 72)
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "START GAME"
 
 [node name="BottomSpacer" type="Control" parent="Margin/Layout"]
