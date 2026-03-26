@@ -45,10 +45,6 @@ grow_vertical = 2
 [node name="Margin" type="MarginContainer" parent="PageCenter"]
 custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
 
 [node name="Layout" type="VBoxContainer" parent="PageCenter/Margin"]
 layout_mode = 2

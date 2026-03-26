@@ -1,26 +1,64 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://vqgddkonbfmn"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://vqgddkonbfmn"]
 
-[ext_resource type="Texture2D" uid="uid://l738fu23t0x3" path="res://assets/ui/kenney/buttons/button_round_depth_flat.png" id="1_7n4n0"]
-[ext_resource type="Texture2D" uid="uid://bqgs0pjt8iy6f" path="res://assets/ui/kenney/buttons/button_round_flat.png" id="2_0esu6"]
+[ext_resource type="Texture2D" uid="uid://bts4475ceo17j" path="res://assets/ui/kenney/buttons/button_rectangle_flat.png" id="1_7n4n0"]
+[ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="1_h3lel"]
+[ext_resource type="Texture2D" uid="uid://cryvhn7l1kap3" path="res://assets/ui/kenney/buttons/button_round_line.png" id="2_0esu6"]
+[ext_resource type="Texture2D" uid="uid://dm40givrnu80d" path="res://assets/ui/kenney/buttons/button_round_depth_line.png" id="3_h3lel"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpxyt"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_llwhj"]
 content_margin_left = 24.0
 content_margin_top = 24.0
 content_margin_right = 24.0
 content_margin_bottom = 24.0
-bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
+texture = ExtResource("1_7n4n0")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7n4n0"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("2_0esu6")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0esu6"]
-texture = ExtResource("1_7n4n0")
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("3_h3lel")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3lel"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
 texture = ExtResource("2_0esu6")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdmw6"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("3_h3lel")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdybv"]
 content_margin_left = 20.0
@@ -36,13 +74,15 @@ corner_radius_bottom_left = 36
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.46666667, 0.46666667, 0.46666667, 1)
-Button/colors/font_hover_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+Button/colors/font_hover_color = Color(0.38549262, 0.38549244, 0.38549247, 1)
 Button/colors/font_pressed_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
-Button/styles/disabled = SubResource("StyleBoxFlat_xpxyt")
+Button/fonts/font = ExtResource("1_h3lel")
+Button/styles/disabled = SubResource("StyleBoxTexture_llwhj")
 Button/styles/hover = SubResource("StyleBoxTexture_7n4n0")
 Button/styles/normal = SubResource("StyleBoxTexture_0esu6")
 Button/styles/pressed = SubResource("StyleBoxTexture_h3lel")
 CheckButton/colors/font_color = Color(1, 1, 1, 1)
+CheckButton/styles/normal = SubResource("StyleBoxTexture_cdmw6")
 Label/colors/font_color = Color(1, 1, 1, 1)
-OptionButton/colors/font_color = Color(1, 1, 1, 1)
+OptionButton/colors/font_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_hdybv")

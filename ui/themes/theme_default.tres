@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bkjc1ko5b2tj7"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bkjc1ko5b2tj7"]
 
 [ext_resource type="Texture2D" uid="uid://l738fu23t0x3" path="res://assets/ui/kenney/buttons/button_round_depth_flat.png" id="1_c2lqr"]
 [ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="1_uf2kn"]
@@ -28,9 +28,9 @@ texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c2lqr"]
 content_margin_left = 24.0
-content_margin_top = 18.0
+content_margin_top = 24.0
 content_margin_right = 24.0
-content_margin_bottom = 18.0
+content_margin_bottom = 24.0
 texture = ExtResource("1_c2lqr")
 texture_margin_left = 32.0
 texture_margin_top = 32.0
@@ -39,9 +39,29 @@ texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rh7o4"]
 content_margin_left = 24.0
-content_margin_top = 18.0
+content_margin_top = 24.0
 content_margin_right = 24.0
-content_margin_bottom = 18.0
+content_margin_bottom = 24.0
+texture = ExtResource("2_uf2kn")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hdybv"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource("1_c2lqr")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n2x55"]
+content_margin_left = 24.0
+content_margin_top = 24.0
 texture = ExtResource("2_uf2kn")
 texture_margin_left = 32.0
 texture_margin_top = 32.0
@@ -76,6 +96,8 @@ Button/styles/hover = SubResource("StyleBoxTexture_uf2kn")
 Button/styles/normal = SubResource("StyleBoxTexture_c2lqr")
 Button/styles/pressed = SubResource("StyleBoxTexture_rh7o4")
 CheckButton/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+CheckButton/styles/normal = SubResource("StyleBoxTexture_hdybv")
+CheckButton/styles/pressed = SubResource("StyleBoxTexture_n2x55")
 Label/colors/font_color = Color(1, 1, 1, 1)
 OptionButton/colors/font_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_hdybv")

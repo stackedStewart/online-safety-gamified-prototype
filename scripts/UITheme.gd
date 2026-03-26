@@ -116,6 +116,6 @@ func _apply_overlay_contrast(root: Control) -> void:
 	var dimmer := root.get_node_or_null("FeedbackOverlay/Dimmer")
 	if dimmer != null and dimmer is ColorRect:
 		if Settings.high_contrast:
-			(dimmer as ColorRect).color = Color(0, 0, 0, 0.82)
+			(dimmer as ColorRect).color = Color(0, 0, 0, 0.35)
 		else:
-			(dimmer as ColorRect).color = Color(0, 0, 0, 0.45)
+			(dimmer as ColorRect).color = Color(0.0, 0.0, 0.0, 0.45)
