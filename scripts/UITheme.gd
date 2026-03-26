@@ -61,8 +61,9 @@ func apply_theme(root: Control) -> void:
 	_set_margin_container_margins(t, m)
 
 	root.theme = t
-
 	_apply_group_font_overrides(root, s)
+	_apply_screen_background(root)
+	_apply_overlay_contrast(root)
 
 func _set_font_size(t: Theme, type: String, size: int) -> void:
 	t.set_font_size("font_size", type, size)
@@ -106,3 +107,15 @@ func _set_control_font_size(c: Control, size: int) -> void:
 	c.remove_theme_font_size_override("font_size")
 	c.add_theme_font_size_override("font_size", size)
 	
+func _apply_screen_background(root: Control) -> void:
+	var bg := root.get_node_or_null("Background")
+	if bg != null and bg is ColorRect:
+		(bg as ColorRect).color = Color.BLACK if Settings.high_contrast else Color("#67c4dd")
+
+func _apply_overlay_contrast(root: Control) -> void:
+	var dimmer := root.get_node_or_null("FeedbackOverlay/Dimmer")
+	if dimmer != null and dimmer is ColorRect:
+		if Settings.high_contrast:
+			(dimmer as ColorRect).color = Color(0, 0, 0, 0.82)
+		else:
+			(dimmer as ColorRect).color = Color(0, 0, 0, 0.45)

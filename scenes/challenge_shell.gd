@@ -169,11 +169,6 @@ func _update_question_counter() -> void:
 	question_counter_label.text = "Question %d of %d" % [current, total]
 	
 func apply_accessibility() -> void:
-	# Background (optional)
-	var bg := get_node_or_null("Background")
-	if bg != null and bg is ColorRect:
-		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#67c4dd")
-
 	# Apply theme scaling (fonts + spacing + padding)
 	UITheme.apply_theme(self)
 	

@@ -21,8 +21,3 @@ func _on_back_pressed() -> void:
 
 func apply_accessibility() -> void:
 	UITheme.apply_theme(self)
-
-	if Settings.high_contrast:
-		background.color = Color.BLACK
-	else:
-		background.color = Color("67c4dd")

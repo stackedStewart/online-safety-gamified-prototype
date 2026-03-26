@@ -48,10 +48,5 @@ func _on_back_to_menu() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 func apply_accessibility() -> void:
-	# Background (optional)
-	var bg := get_node_or_null("Background")
-	if bg != null and bg is ColorRect:
-		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("67c4dd")
-
 	# Apply theme scaling (fonts + spacing + padding)
 	UITheme.apply_theme(self)

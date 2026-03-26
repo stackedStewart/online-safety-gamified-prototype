@@ -16,9 +16,3 @@ func _on_start_pressed() -> void:
 
 func apply_accessibility() -> void:
 	UITheme.apply_theme(self)
-
-	# Keep title screen specific background behaviour here
-	if Settings.high_contrast:
-		background.color = Color.BLACK
-	else:
-		background.color = Color("67c4dd")

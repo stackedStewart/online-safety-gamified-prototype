@@ -34,13 +34,6 @@ func _on_back_pressed() -> void:
 func apply_accessibility() -> void:
 	UITheme.apply_theme(self)
 	
-	# Background (optional)
-	var bg := get_node_or_null("Background")
-	if bg != null and bg is ColorRect:
-		(bg as ColorRect).color = Color("#000000") if Settings.high_contrast else Color("#67c4dd")
-		
-	
-	
 	var title := $Margin/Layout/NinePatchRect/TitleLabel
 	if title:
 		title.add_theme_font_size_override("font_size", int(36 * Settings.text_scale))

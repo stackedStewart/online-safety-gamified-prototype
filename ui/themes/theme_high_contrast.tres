@@ -1,4 +1,7 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://vqgddkonbfmn"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://vqgddkonbfmn"]
+
+[ext_resource type="Texture2D" uid="uid://l738fu23t0x3" path="res://assets/ui/kenney/buttons/button_round_depth_flat.png" id="1_7n4n0"]
+[ext_resource type="Texture2D" uid="uid://bqgs0pjt8iy6f" path="res://assets/ui/kenney/buttons/button_round_flat.png" id="2_0esu6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpxyt"]
 content_margin_left = 24.0
@@ -14,22 +17,10 @@ corner_radius_bottom_left = 25
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7n4n0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0esu6"]
+texture = ExtResource("1_7n4n0")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uf2kn"]
-content_margin_left = 18.0
-content_margin_top = 12.0
-content_margin_right = 18.0
-content_margin_bottom = 12.0
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3lel"]
+texture = ExtResource("2_0esu6")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdybv"]
 content_margin_left = 20.0
@@ -50,7 +41,7 @@ Button/colors/font_pressed_color = Color(0.101960786, 0.101960786, 0.101960786, 
 Button/styles/disabled = SubResource("StyleBoxFlat_xpxyt")
 Button/styles/hover = SubResource("StyleBoxTexture_7n4n0")
 Button/styles/normal = SubResource("StyleBoxTexture_0esu6")
-Button/styles/pressed = SubResource("StyleBoxFlat_uf2kn")
+Button/styles/pressed = SubResource("StyleBoxTexture_h3lel")
 CheckButton/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_color = Color(1, 1, 1, 1)
 OptionButton/colors/font_color = Color(1, 1, 1, 1)
