@@ -145,7 +145,8 @@ func _on_option_pressed(button: Button) -> void:
 
 	feedback_title.text = "⭐ Great job!" if is_correct else "🙂 Nice try!"
 	feedback_text.text = feedback
-	overlay.visible = true
+	
+	_show_feedback_overlay()
 
 	option_a.disabled = true
 	option_b.disabled = true
@@ -180,6 +181,11 @@ func apply_accessibility() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"): # Enter/Space by default
 		_print_layout_sizes()
+		
+func _show_feedback_overlay() -> void:
+	# Motion is minimal in this prototype
+	# Helper exisits for expansion of reduced motion behaviour later
+	overlay.visible = true
 
 func _print_layout_sizes() -> void:
 	var layout := $PageContainer/Margin/Layout
