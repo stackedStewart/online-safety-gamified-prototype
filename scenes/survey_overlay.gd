@@ -1,6 +1,6 @@
 extends Control
 
-@export var form_url: String = "https://forms.gle/6c9UK3gdxmFZ1NRP9"
+@export var form_url: String = "https://forms.gle/v3eMkdbtCAHxm92W7"
 
 @onready var open_form_button: Button = $CenterContainer/Panel/PanelMargin/PanelLayout/OpenFormButton
 @onready var close_button: Button = $CenterContainer/Panel/PanelMargin/PanelLayout/CloseButton
