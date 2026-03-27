@@ -37,13 +37,13 @@ func _ready() -> void:
 
 func _message_for_score(correct: int, total: int) -> String:
 	if correct >= total:
-		return "🏆 Online Safety Star!\nAmazing! If you're not sure, tell a trusted adult."
+		return "Online Safety Star!\nAmazing! If you're not sure, tell a trusted adult."
 	elif correct >= int(ceil(total * 0.75)):
-		return "⭐ Safety Hero!\nGreat job! If you're not sure, tell a trusted adult."
+		return "Safety Hero!\nGreat job! If you're not sure, tell a trusted adult."
 	elif correct >= int(ceil(total * 0.5)):
-		return "🙂 Safety Learner!\nGood effort! Take your time and think it through."
+		return "Safety Learner!\nGood effort! Take your time and think it through."
 	else:
-		return "🌱 Getting Started!\nNice try! Let's practise again — tell a trusted adult if unsure."
+		return "Getting Started!\nNice try! Let's practise again — tell a trusted adult if unsure."
 
 func _on_try_again() -> void:
 	GameState.reset_run()

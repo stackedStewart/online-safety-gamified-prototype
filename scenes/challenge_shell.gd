@@ -143,7 +143,7 @@ func _on_option_pressed(button: Button) -> void:
 
 	GameState.apply_answer(is_correct, feedback)
 
-	feedback_title.text = "⭐ Great job!" if is_correct else "🙂 Nice try!"
+	feedback_title.text = "Great job!" if is_correct else "Nice try!"
 	feedback_text.text = feedback
 	
 	_show_feedback_overlay()

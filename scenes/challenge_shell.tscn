@@ -108,8 +108,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_lis8p")
 theme_override_font_sizes/font_size = 30
-text = "Safety Question
-"
+text = "What would you do?"
 horizontal_alignment = 1
 vertical_alignment = 2
 
