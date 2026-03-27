@@ -78,7 +78,10 @@ theme_override_font_sizes/font_size = 32
 text = "High Contrast"
 
 [node name="HighContrastToggle" type="CheckButton" parent="PageCenter/Margin/Layout/HighContrastRow"]
+custom_minimum_size = Vector2(84, 84)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="SoundRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
@@ -91,7 +94,10 @@ theme_override_font_sizes/font_size = 32
 text = "Sound"
 
 [node name="SoundToggle" type="CheckButton" parent="PageCenter/Margin/Layout/SoundRow"]
+custom_minimum_size = Vector2(84, 84)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="ReduceMotionRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
@@ -104,7 +110,10 @@ theme_override_font_sizes/font_size = 32
 text = "Reduce Motion"
 
 [node name="ReduceMotionToggle" type="CheckButton" parent="PageCenter/Margin/Layout/ReduceMotionRow"]
+custom_minimum_size = Vector2(84, 84)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="BackButton" type="Button" parent="PageCenter/Margin/Layout"]
 custom_minimum_size = Vector2(300, 64)
