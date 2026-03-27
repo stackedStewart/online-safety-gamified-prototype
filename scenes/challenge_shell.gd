@@ -123,7 +123,7 @@ func _show_current() -> void:
 	_update_question_counter()
 
 func _update_xp() -> void:
-	xp_label.text = "Stars: %d" % GameState.xp
+	xp_label.text = "XP: %d" % GameState.xp
 
 func _on_option_pressed(button: Button) -> void:
 	if awaiting_next:
