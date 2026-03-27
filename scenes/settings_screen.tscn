@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://db830jfdgfklv"]
+[gd_scene load_steps=3 format=3 uid="uid://db830jfdgfklv"]
 
 [ext_resource type="Script" uid="uid://jw3tpydiw4an" path="res://scenes/settings_screen.gd" id="1_srqes"]
+[ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="2_assm4"]
 
 [node name="SettingsScreen" type="Control"]
 layout_mode = 3
@@ -29,24 +30,33 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Margin" type="MarginContainer" parent="PageCenter"]
+custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
-theme_override_constants/margin_left = 65
+theme_override_constants/margin_left = 80
 theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 80
 theme_override_constants/margin_bottom = 80
 
 [node name="Layout" type="VBoxContainer" parent="PageCenter/Margin"]
 layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
 
 [node name="TitleLabel" type="Label" parent="PageCenter/Margin/Layout" groups=["ui_title"]]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_assm4")
 theme_override_font_sizes/font_size = 62
 text = "Settings"
 horizontal_alignment = 1
 
+[node name="Control" type="Control" parent="PageCenter/Margin/Layout"]
+layout_mode = 2
+
 [node name="TextSizeRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_constants/separation = 150
+alignment = 1
 
 [node name="TextSizeLabel" type="Label" parent="PageCenter/Margin/Layout/TextSizeRow"]
 layout_mode = 2
@@ -59,6 +69,8 @@ theme_override_font_sizes/font_size = 32
 
 [node name="HighContrastRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
+theme_override_constants/separation = 70
+alignment = 1
 
 [node name="HighContrastLabel" type="Label" parent="PageCenter/Margin/Layout/HighContrastRow"]
 layout_mode = 2
@@ -70,6 +82,8 @@ layout_mode = 2
 
 [node name="SoundRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
+theme_override_constants/separation = 180
+alignment = 1
 
 [node name="SoundLabel" type="Label" parent="PageCenter/Margin/Layout/SoundRow"]
 layout_mode = 2
@@ -81,6 +95,8 @@ layout_mode = 2
 
 [node name="ReduceMotionRow" type="HBoxContainer" parent="PageCenter/Margin/Layout"]
 layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
 
 [node name="ReduceMotionLabel" type="Label" parent="PageCenter/Margin/Layout/ReduceMotionRow"]
 layout_mode = 2

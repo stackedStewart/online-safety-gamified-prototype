@@ -85,4 +85,5 @@ CheckButton/colors/font_color = Color(1, 1, 1, 1)
 CheckButton/styles/normal = SubResource("StyleBoxTexture_cdmw6")
 Label/colors/font_color = Color(1, 1, 1, 1)
 OptionButton/colors/font_color = Color(0.038397167, 0.038397167, 0.03839716, 1)
+OptionButton/font_sizes/font_size = 16
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_hdybv")
