@@ -21,19 +21,25 @@ func _ready() -> void:
 	apply_accessibility()
 
 func _on_play_pressed() -> void:
+	SFXManager.play_click()
 	GameState.reset_run()
+	
 	get_tree().change_scene_to_file("res://scenes/challenge_shell.tscn")
 	
 func _on_how_to_play_pressed() -> void:
+	SFXManager.play_click()
 	get_tree().change_scene_to_file("res://scenes/how_to_play.tscn")
 
 func _on_settings_pressed() -> void:
+	SFXManager.play_click()
 	get_tree().change_scene_to_file("res://scenes/settings_screen.tscn")
 	
 func _on_back_pressed() -> void:
+	SFXManager.play_click()
 	get_tree().change_scene_to_file("res://scenes/start.tscn")
 	
 func _on_feedback_pressed() -> void:
+	# SFXManager.play_click()
 	survey_overlay.show_overlay()
 
 

@@ -131,6 +131,11 @@ func _on_option_pressed(button: Button) -> void:
 
 	var s: Dictionary = scenarios[current_index]
 	var is_correct: bool = bool(button.get_meta("is_correct", false))
+	
+	if is_correct:
+		SFXManager.play_correct()
+	else:
+		SFXManager.play_incorrect()
 
 	var correct_msg := str(s.get("feedback_correct", "Well done!"))
 	var wrong_msg := str(s.get("feedback_wrong", "Nice try!"))
