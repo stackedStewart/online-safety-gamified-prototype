@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b7x8t1yijfand" path="res://scenes/menu.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://dxt23h4qwmqtg" path="res://assets/ui/kenney/titleBanner/button_rectangle_depth_flat.png" id="2_vjb58"]
 [ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="3_con2f"]
-[ext_resource type="PackedScene" uid="uid://ditm5y1oc6lft" path="res://survey_overlay.tscn" id="4_mhnvy"]
+[ext_resource type="PackedScene" uid="uid://ditm5y1oc6lft" path="res://scenes/survey_overlay.tscn" id="4_mhnvy"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

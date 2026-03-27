@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bkjc1ko5b2tj7" path="res://ui/themes/theme_default.tres" id="1_21kdr"]
 [ext_resource type="Script" uid="uid://p8ciulm2ak8a" path="res://scenes/results.gd" id="1_qh7lt"]
-[ext_resource type="PackedScene" uid="uid://ditm5y1oc6lft" path="res://survey_overlay.tscn" id="3_r4wmc"]
+[ext_resource type="PackedScene" uid="uid://ditm5y1oc6lft" path="res://scenes/survey_overlay.tscn" id="3_r4wmc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qh7lt"]
 bg_color = Color(0.7490196, 0.96862745, 0.9019608, 1)

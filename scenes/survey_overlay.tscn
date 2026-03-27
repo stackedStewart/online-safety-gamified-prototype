@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ditm5y1oc6lft"]
+[gd_scene load_steps=3 format=3 uid="uid://ditm5y1oc6lft"]
 
-[ext_resource type="Script" uid="uid://cqbhry2tjmbhf" path="res://survey_overlay.gd" id="1_hm3m1"]
+[ext_resource type="Script" uid="uid://cqbhry2tjmbhf" path="res://scenes/survey_overlay.gd" id="1_hm3m1"]
+[ext_resource type="FontFile" uid="uid://b4xrljofokkcv" path="res://assets/ui/kenney/font/DroidSans-Bold.ttf" id="2_1d04y"]
 
 [node name="SurveyOverlay" type="Control"]
 layout_mode = 3
@@ -46,6 +47,8 @@ theme_override_constants/separation = 16
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.18000486, 0.18000486, 0.18000486, 1)
+theme_override_fonts/font = ExtResource("2_1d04y")
 theme_override_font_sizes/font_size = 28
 text = "Help Improve this Prototype"
 horizontal_alignment = 1
@@ -53,6 +56,8 @@ horizontal_alignment = 1
 [node name="BodyLabel" type="Label" parent="CenterContainer/Panel/PanelMargin/PanelLayout"]
 custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+theme_override_fonts/font = ExtResource("2_1d04y")
 text = "If you would like to leave feedback, you can open a short Google Form below.
 * No personal information will be taken, and is completely optional"
 horizontal_alignment = 1
